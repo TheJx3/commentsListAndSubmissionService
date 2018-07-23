@@ -108,7 +108,7 @@ const users = [
 // GENERATOR
 const commentGen = (hipString) => {
   const comments = [];
-  for (let i = 0; i < 50; i += 1) {
+  for (let i = 1; i <= 50; i += 1) {
     const comment = {};
 
     // id, username, userId
@@ -144,7 +144,5 @@ const commentGen = (hipString) => {
   return comments;
 };
 
-const data = JSON.stringify(commentGen(hipster)); 
-fs.writeFile('sampleCommentData.JSON', data, (err) => {
-  return err ? console.log('error occured: ', err) : console.log('sampleCommentData saved.') 
-});
+const data = JSON.stringify(commentGen(hipster));
+fs.writeFile('./db/sampleCommentData.JSON', data, err => (err ? console.log('error occured: ', err) : console.log('sampleCommentData saved.')));
