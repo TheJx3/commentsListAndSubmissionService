@@ -1,23 +1,21 @@
 const mongoose = require('mongoose');
-
 const sampleData = require('./sampleCommentData');
+// const Schema = mongoose.Schema;
 
-const Schema = mongoose.Schema; 
-
-mongoose.connect('mongodb://localhost/commentsListViewAndSubmission');
+mongoose.connect('mongodb://localhost/commentsList');
 
 const db = mongoose.connection;
 db.on('error', () => console.log('error connecting to mongo'));
 db.once('open', () => console.log('connected to mongo'));
 
-const repliesSchema = new Schema({
+const repliesSchema = new mongoose.Schema({
   id: Number,
   username: String,
   userId: Number,
   text: String,
 });
 
-const commentsSchema = new Schema({
+const commentsSchema = new mongoose.Schema({
   id: { type: Number, unique: true },
   username: String,
   userId: Number,
@@ -29,6 +27,7 @@ const commentsSchema = new Schema({
 
 const Comment = mongoose.model('comment', commentsSchema);
 
+// /* For generating mongo database
 for (let i = 0; i < sampleData.length; i += 1) {
   const saveComment = new Comment(sampleData[i]);
   saveComment.save((error, sampleData) => {
@@ -38,13 +37,27 @@ for (let i = 0; i < sampleData.length; i += 1) {
     return console.log('saved', sampleData);
   });
 }
+// */
 
-// console.log(sampleData); 
-
-Comment.find((error, comments) => {
-  if (error) {
-    console.log('could not find comments');
+// Gets all comments for a song on song page
+const getComments = (err, retrievedComments) => {
+  if (err) {
+    console.log('error occured: ', err);
   } else {
-    console.log('here are the comments: ', comments);
+    Comment.find({}).exec((error, comments) => {
+      if (error) {
+        console.log('error: ', err);
+      } else {
+        // sort data to display newest comments
+        comments.sort((a, b) => b.id - a.id);
+
+        // log test
+        console.log('returned from database: ', comments);
+
+        retrievedComments(null, comments);
+      }
+    });
   }
-});
+};
+
+module.exports.getComments = getComments;
