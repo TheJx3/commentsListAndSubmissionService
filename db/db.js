@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const sampleData = require('./sampleCommentData');
-// const Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost/commentsList');
 
@@ -27,7 +26,7 @@ const commentsSchema = new mongoose.Schema({
 
 const Comment = mongoose.model('comment', commentsSchema);
 
-// /* For generating mongo database
+// For populating database
 for (let i = 0; i < sampleData.length; i += 1) {
   const saveComment = new Comment(sampleData[i]);
   saveComment.save((error, sampleData) => {
@@ -37,7 +36,6 @@ for (let i = 0; i < sampleData.length; i += 1) {
     return console.log('saved', sampleData);
   });
 }
-// */
 
 // Gets all comments for a song on song page
 const getComments = (err, retrievedComments) => {
