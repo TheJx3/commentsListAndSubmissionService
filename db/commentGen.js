@@ -126,19 +126,41 @@ const commentGen = (hipString) => {
     comment.text = message;
 
     // replies
-    const reply = {};
-    comment.replies = [];
     if (comment.userId % 2 === 0 && comment.username.length < 15) {
-      reply.id = i;
-      reply.username = users[randomUser + Math.round(Math.random() * 5)];
-      reply.userId = users.indexOf(reply.username);
-      for (let x = Math.floor(Math.random() * users.length); x < users.length; x += Math.random() * 10) {
-        reply.text = `@${comment.username} reply to: ${message}`;
+      let randomNumber = Math.floor(Math.random() * 11);
+      let replyMessage = '';
+      for (let wordCount = 0; wordCount < maxWordCount; wordCount += 1) {
+        replyMessage += `${hipArray[Math.floor(Math.random() * hipArray.length)]} `;
       }
-      comment.replies.push(reply);
+      let reply = {};
+      comment.replies = [];
+      for (let j = 1; j < randomNumber; j += 1) {
+        reply.id = j;
+        reply.username = users[randomUser + Math.floor(Math.random() * 6)];
+        reply.userId = users.indexOf(reply.username);
+        reply.text = `@${comment.username} - Reply: ${replyMessage}`;
+        if (comment.replies.length > 2) {
+          let repliedTo = Math.round(Math.random() * 10);
+          if (repliedTo < 3) {
+            reply.text = `@${comment.username} - Reply: ${replyMessage}`;
+          } else {
+            let randomUserRepliedTo = Math.floor(Math.random() * comment.replies.length);
+            reply.text = `@${comment.replies[randomUserRepliedTo].username} - ReplyToReply: ${comment.replies[randomUserRepliedTo].text}`;
+          }
+        }
+        comment.replies.push(reply);
+        reply = {};
+      }
     }
+
+    if (comment.replies && comment.replies.length === 0) {
+      delete comment.replies;
+    }
+
+    // songtime, timestamp
     comment.songtime = Math.round(Math.random() * 600);
     comment.timestamp = Date();
+
     comments.push(comment);
   }
   return comments;
