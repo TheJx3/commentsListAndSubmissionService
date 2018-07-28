@@ -26,21 +26,21 @@ const commentsSchema = new mongoose.Schema({
 
 const Comment = mongoose.model('comment', commentsSchema);
 
-// Remove collection of database if it already exists
-Comment.remove({}, () => {
-  console.log('removed collection');
-});
+// // Remove collection of database if it already exists
+// Comment.remove({}, () => {
+//   console.log('removed collection');
+// });
 
-// Populates collection in database
-for (let i = 0; i < sampleData.length; i += 1) {
-  const saveComment = new Comment(sampleData[i]);
-  saveComment.save((error, sampleData) => {
-    if (error) {
-      return console.log('error saving');
-    }
-    return console.log('saved', sampleData);
-  });
-}
+// // Populates collection in database
+// for (let i = 0; i < sampleData.length; i += 1) {
+//   const saveComment = new Comment(sampleData[i]);
+//   saveComment.save((error, sampleData) => {
+//     if (error) {
+//       return console.log('error saving');
+//     }
+//     return console.log('saved', sampleData);
+//   });
+// }
 
 // Gets all comments for a song on song page
 const getComments = (err, retrievedComments) => {
@@ -55,7 +55,7 @@ const getComments = (err, retrievedComments) => {
         comments.sort((a, b) => b.id - a.id);
 
         // log test
-        console.log('returned from database: ', comments);
+        console.log('returned from database: ', comments[0]);
 
         retrievedComments(null, comments);
       }
