@@ -26,7 +26,12 @@ const commentsSchema = new mongoose.Schema({
 
 const Comment = mongoose.model('comment', commentsSchema);
 
-// For populating database
+// Remove collection of database if it already exists
+Comment.remove({}, () => {
+  console.log('removed collection');
+});
+
+// Populates collection in database
 for (let i = 0; i < sampleData.length; i += 1) {
   const saveComment = new Comment(sampleData[i]);
   saveComment.save((error, sampleData) => {
