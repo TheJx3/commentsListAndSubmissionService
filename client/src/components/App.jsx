@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentsList from './components/commentsListAndSubmit'
+import CommentsList from './CommentsList'
 
 class App extends React.Component {
   constructor (props) {
