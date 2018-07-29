@@ -28,3 +28,11 @@ container {
   width: 680px; 
   border: 10px solid green;
 }
+
+#comments span {
+  font-size: 12px;
+}
+
+#comments p {
+  font-size: 12px;
+}
