@@ -124,6 +124,10 @@ const commentGen = (hipString) => {
       message += `${hipArray[Math.floor(Math.random() * hipArray.length)]} `;
     }
     comment.text = message;
+    
+    // songtime, timestamp
+    comment.songtime = Math.round(Math.random() * 600);
+    comment.timestamp = Date();
 
     // replies
     if (comment.userId % 2 === 0 && comment.username.length < 15) {
@@ -139,6 +143,7 @@ const commentGen = (hipString) => {
         reply.username = users[randomUser + Math.floor(Math.random() * 6)];
         reply.userId = users.indexOf(reply.username);
         reply.text = `@${comment.username} - Reply: ${replyMessage}`;
+        reply.songtime = comment.songtime;
         if (comment.replies.length > 2) {
           let repliedTo = Math.round(Math.random() * 10);
           if (repliedTo < 3) {
@@ -157,9 +162,6 @@ const commentGen = (hipString) => {
       delete comment.replies;
     }
 
-    // songtime, timestamp
-    comment.songtime = Math.round(Math.random() * 600);
-    comment.timestamp = Date();
 
     comments.push(comment);
   }

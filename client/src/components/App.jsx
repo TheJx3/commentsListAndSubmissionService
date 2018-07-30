@@ -27,6 +27,9 @@ class App extends React.Component {
   render () {
     return (
       <div>
+        <div>
+          <p> <i class="fas fa-comment-alt"></i> {this.state.comments.length} comments </p>
+        </div>
         <CommentsList commentsList={this.state.comments}/>
       </div>
     );

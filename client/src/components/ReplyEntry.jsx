@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 // styles
-const CommentContainer = styled.div`
+const ReplyContainer = styled.div`
   height: auto;
-  width: 600px;
+  width: 500px;
   display: flex;
   margin: 22px 5px 1px 5px;
 `
@@ -14,31 +14,35 @@ const Avatar = styled.div`
   min-width: 40px; 
   border: 2px solid cyan; 
   margin-right: 8px;
-`
-const CommentContent = styled.div`
+`;
+
+const ReplyContent = styled.div`
   display: flex;
   flex-direction: column
 `
+const ReplyUser = styled.div`
+  font-size: 12px;
+  color: #999;
+`;
 
 const Content = styled.div`
-  font-size: 12px; 
-  display: flex;
+  font-size: 12px;
 `;
 
 // components
 const ReplyEntry = ({reply}) => {
   return (
-    <CommentContainer>
-      <Avatar></Avatar>
-      <CommentContent>
-        <Content>
-          {reply.username}
-        </Content>
+    <ReplyContainer>
+      <Avatar><i class="far fa-user-circle fa-2x"></i></Avatar>
+      <ReplyContent>
+        <ReplyUser>
+          <a href='#'>{reply.username}</a>
+        </ReplyUser>
         <Content>
           {reply.text}
         </Content>
-      </CommentContent>
-    </CommentContainer>
+      </ReplyContent>
+    </ReplyContainer>
   )
 }
 

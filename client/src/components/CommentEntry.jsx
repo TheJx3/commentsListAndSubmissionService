@@ -21,9 +21,12 @@ const CommentContent = styled.div`
   flex-direction: column
 `
 
+const CommentUser = styled.div`
+  font-size: 12px;
+  color: #ccc;
+`
 const Content = styled.div`
-  font-size: 12px; 
-  display: flex;
+  font-size: 12px;
 `;
 
 // components
@@ -48,19 +51,19 @@ const CommentEntry = ({comment}) => {
 
   return (
     <CommentContainer>
-      <Avatar></Avatar> 
+      <Avatar><i class="fas fa-user-circle fa-2x"></i></Avatar>
       <CommentContent>
-        <Content>
-          {comment.username} at {secondsToTime(comment.songtime)}
-        </Content>
+        <CommentUser>
+          <a href='#'>{comment.username}</a> at <a href='#'>{secondsToTime(comment.songtime)}</a>
+        </CommentUser>
         <Content>
           {comment.text}
         </Content>
-        <Content>
+
           <div>
             {comment.replies.map(reply => <ReplyEntry key={reply.id} reply={reply} />)}
           </div>
-        </Content>
+
       </CommentContent>
     </CommentContainer>
   )

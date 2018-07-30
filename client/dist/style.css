@@ -1,10 +1,5 @@
-container {
-  display: flex; 
-  flex-direction: row; 
-}
-
 #musicPlayer {
-  height: 380px;
+  height: 420px;
   width: 1280px; 
   border: 10px solid red;
   margin: auto;
@@ -17,20 +12,37 @@ container {
 }
 
 #artistInfo {
-  min-height: auto;
+  height: 250px;
   width: 140px;
   border: 10px solid yellowgreen;
 }
 
 #comments {
   min-height: auto;
-  width: 700px; 
+  width: 750px; 
   border: 10px solid green;
+  font-family: 'Roboto', sans-serif;
+}
+
+#comments p {
+  font-size: 16px;
+  color: #999;
+  padding: 0px 0px 15px 10px;
+  border-bottom: 1px solid;
+}
+
+#comments a {
+  color: #999;
+  text-decoration: none;
+}
+
+#comments a:hover {
+  color: black; 
 }
 
 #suggestedTracks {
   height: 1000px; 
-  width: 400px; 
+  width: 350px; 
   border: 10px solid blue;
 
 }
