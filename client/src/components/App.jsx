@@ -27,6 +27,7 @@ class App extends React.Component {
   render () {
     return (
       <div>
+        <p>{this.state.comments.length} comments</p>
         <CommentsList commentsList={this.state.comments}/>
       </div>
     );
