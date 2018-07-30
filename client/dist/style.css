@@ -1,5 +1,5 @@
 #musicPlayer {
-  height: 380px;
+  height: 420px;
   width: 1280px; 
   border: 10px solid red;
   margin: auto;
@@ -21,7 +21,23 @@
   min-height: auto;
   width: 750px; 
   border: 10px solid green;
-  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+#comments p {
+  font-size: 16px;
+  color: #999;
+  padding: 0px 0px 15px 10px;
+  border-bottom: 1px solid;
+}
+
+#comments a {
+  color: #999;
+  text-decoration: none;
+}
+
+#comments a:hover {
+  color: black; 
 }
 
 #suggestedTracks {
