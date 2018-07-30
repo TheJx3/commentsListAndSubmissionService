@@ -5,7 +5,7 @@ container {
 
 #musicPlayer {
   height: 380px;
-  width: 1260px; 
+  width: 1280px; 
   border: 10px solid red;
   margin: auto;
 }
@@ -16,15 +16,22 @@ container {
   justify-content: center; 
 }
 
+#artistInfo {
+  min-height: auto;
+  width: 140px;
+  border: 10px solid yellowgreen;
+}
+
+#comments {
+  min-height: auto;
+  width: 700px; 
+  border: 10px solid green;
+}
+
 #suggestedTracks {
   height: 1000px; 
-  width: 440px; 
+  width: 400px; 
   border: 10px solid blue;
 
 }
 
-#comments {
-  height: 1000px;
-  width: 800px; 
-  border: 10px solid green;
-}
