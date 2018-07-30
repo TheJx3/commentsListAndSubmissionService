@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <p> <i class="fas fa-comment-alt"></i> {this.state.comments.length} comments </p>
+          <p> <i className="fas fa-comment-alt"></i> {this.state.comments.length} comments </p>
         </div>
         <CommentsList commentsList={this.state.comments}/>
       </div>

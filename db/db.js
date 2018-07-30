@@ -11,6 +11,8 @@ const repliesSchema = new mongoose.Schema({
   id: Number,
   username: String,
   userId: Number,
+  songtime: Number,
+  timestamp: Date,
   text: String,
 });
 
@@ -18,10 +20,10 @@ const commentsSchema = new mongoose.Schema({
   id: { type: Number, unique: true },
   username: String,
   userId: Number,
-  text: String,
-  replies: [repliesSchema],
   songtime: Number,
   timestamp: Date,
+  text: String,
+  replies: [repliesSchema],
 });
 
 const Comment = mongoose.model('comment', commentsSchema);
