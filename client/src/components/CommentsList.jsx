@@ -2,7 +2,7 @@ import React from 'react';
 import CommentEntry from './CommentEntry';
 
 const CommentsList = props => (
-  <div className='comments'>
+  <div>
     {props.commentsList.map(comment => <CommentEntry key={comment.id} comment={comment} />
     )}
   </div>
