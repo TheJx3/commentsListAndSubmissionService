@@ -1,315 +1,391 @@
 const sampleData = [{
-  id: 1, username: 'widowenvelope', userId: 22, text: 'meditation plaid bird viral probably kickstarter. probably celiac copper ', songtime: 199, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 2, username: 'snowballbollard', userId: 51, text: 'In literally incididunt sartorial truck authentic, irony la Freegan ', songtime: 92, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 3,
-  username: 'bathetinkle',
-  userId: 4,
-  text: 'tote ea health they anim on Food keffiyeh tbh ',
+  id: 1,
+  username: 'scubaunderwear',
+  userId: 40,
+  text: 'DIY, wolf normcore ',
+  songtime: 94,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'bathetinkle', userId: 4, text: '@bathetinkle - Reply: Green blog tote them austin Aute helvetica tumblr charcoal ',
+    id: 1, username: 'bawdyfields', userId: 41, text: '@scubaunderwear - Reply: +1 paleo. Taiyaki ', songtime: 94,
   }, {
-    id: 2, username: 'digitsposing', userId: 5, text: '@bathetinkle - Reply: Green blog tote them austin Aute helvetica tumblr charcoal ',
+    id: 2, username: 'discerningjamaican', userId: 43, text: '@scubaunderwear - Reply: +1 paleo. Taiyaki ', songtime: 94,
   }, {
-    id: 3, username: 'bathetinkle', userId: 4, text: '@bathetinkle - Reply: Green blog tote them austin Aute helvetica tumblr charcoal ',
+    id: 3, username: 'shintnainted', userId: 44, text: '@scubaunderwear - Reply: +1 paleo. Taiyaki ', songtime: 94,
   }, {
-    id: 4, username: 'digitsposing', userId: 5, text: '@digitsposing - ReplyToReply: @bathetinkle - Reply: Green blog tote them austin Aute helvetica tumblr charcoal ',
+    id: 4, username: 'frictionpuppies', userId: 42, text: '@scubaunderwear - Reply: +1 paleo. Taiyaki ', songtime: 94,
   }, {
-    id: 5, username: 'buepound', userId: 9, text: '@bathetinkle - Reply: Green blog tote them austin Aute helvetica tumblr charcoal ',
+    id: 5, username: 'frictionpuppies', userId: 42, text: '@frictionpuppies - ReplyToReply: @scubaunderwear - Reply: +1 paleo. Taiyaki ', songtime: 94,
   }],
-  songtime: 202,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 4, username: 'lilygrubby', userId: 73, text: 'Banjo bread beard ea ', songtime: 377, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 2, username: 'collagentopping', userId: 30, text: 'you keffiyeh ', songtime: 197, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 5,
-  username: 'clapmodule',
-  userId: 6,
-  text: 'carry marfa anim blue af, juice ',
+  id: 3, username: 'graciemothers', userId: 54, text: 'poke. Food chambray, ', songtime: 94, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 4, username: 'shadowpug', userId: 67, text: 'ramps la tofu. twee laborum. non ugh ', songtime: 10, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 5, username: 'bawdyfields', userId: 41, text: 'adaptogen carry austin letterpress jean kogi. ', songtime: 578, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 6, username: 'phonewhole', userId: 19, text: 'squid cold-pressed portland of snackwave. ', songtime: 263, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 7, username: 'phonewhole', userId: 19, text: 'Cillum biodiesel excepteur ', songtime: 444, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 8, username: 'smagstress', userId: 39, text: 'hammock. readymade helvetica ', songtime: 148, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 9, username: 'snickerscaper', userId: 59, text: "on forage officia knausgaard scenester stumptown haven't belly cold-pressed occaecat ", songtime: 177, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 10, username: 'universalmimping', userId: 33, text: 'forage prism bottle glossier. pack. pop-up. wolf church-key gentrify ', songtime: 398, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 11, username: 'phoebelunch', userId: 79, text: 'cardigan. esse, everyday ', songtime: 261, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 12,
+  username: 'calirave',
+  userId: 98,
+  text: 'Snackwave croix of ',
+  songtime: 180,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'scissorsprocesses', userId: 11, text: '@clapmodule - Reply: cliche celiac. YOLO laborum twee tempor, ',
+    id: 1, userId: -1, text: '@calirave - Reply: ad You croix ', songtime: 180,
   }, {
-    id: 2, username: 'clapmodule', userId: 6, text: '@clapmodule - Reply: cliche celiac. YOLO laborum twee tempor, ',
+    id: 2, username: 'calirave', userId: 98, text: '@calirave - Reply: ad You croix ', songtime: 180,
   }, {
-    id: 3, username: 'flagstaffmetallic', userId: 10, text: '@clapmodule - Reply: cliche celiac. YOLO laborum twee tempor, ',
+    id: 3, username: 'blackyvarnish', userId: 99, text: '@calirave - Reply: ad You croix ', songtime: 180,
   }, {
-    id: 4, username: 'clapmodule', userId: 6, text: '@scissorsprocesses - ReplyToReply: @clapmodule - Reply: cliche celiac. YOLO laborum twee tempor, ',
+    id: 4, userId: -1, text: '@calirave - Reply: ad You croix ', songtime: 180,
   }, {
-    id: 5, username: 'buepound', userId: 9, text: '@clapmodule - ReplyToReply: @clapmodule - Reply: cliche celiac. YOLO laborum twee tempor, ',
+    id: 5, username: 'blackyvarnish', userId: 99, text: '@calirave - Reply: ad You croix ', songtime: 180,
+  }, {
+    id: 6, userId: -1, text: '@undefined - ReplyToReply: @calirave - Reply: ad You croix ', songtime: 180,
+  }, {
+    id: 7, userId: -1, text: '@undefined - ReplyToReply: @calirave - Reply: ad You croix ', songtime: 180,
+  }, {
+    id: 8, username: 'blackyvarnish', userId: 99, text: '@undefined - ReplyToReply: @undefined - ReplyToReply: @calirave - Reply: ad You croix ', songtime: 180,
+  }, {
+    id: 9, userId: -1, text: '@blackyvarnish - ReplyToReply: @calirave - Reply: ad You croix ', songtime: 180,
   }],
-  songtime: 502,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 6,
-  username: 'rogerbait',
-  userId: 60,
-  text: 'Single-origin Sartorial knausgaard Food non v literally, ',
+  id: 13, username: 'smagstress', userId: 39, text: 'incididunt la dolor, Banjo ', songtime: 66, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 14, username: 'closedobliging', userId: 37, text: 'Banjo drinking viral trade. ', songtime: 26, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 15,
+  username: 'scubaunderwear',
+  userId: 40,
+  text: 'Food celiac yr food tousled magna truffaut health ',
+  songtime: 339,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'rogerbait', userId: 60, text: '@rogerbait - Reply: squid axe juice chartreuse laborum. taiyaki in. ',
+    id: 1, username: 'shintnainted', userId: 44, text: '@scubaunderwear - Reply: four slow-carb croix santo Hammock carry. ramps chicharrones ', songtime: 339,
   }, {
-    id: 2, username: 'ziggybrace', userId: 65, text: '@rogerbait - Reply: squid axe juice chartreuse laborum. taiyaki in. ',
+    id: 2, username: 'frictionpuppies', userId: 42, text: '@scubaunderwear - Reply: four slow-carb croix santo Hammock carry. ramps chicharrones ', songtime: 339,
   }, {
-    id: 3, username: 'casperathletics', userId: 61, text: '@rogerbait - Reply: squid axe juice chartreuse laborum. taiyaki in. ',
+    id: 3, username: 'frictionpuppies', userId: 42, text: '@scubaunderwear - Reply: four slow-carb croix santo Hammock carry. ramps chicharrones ', songtime: 339,
   }, {
-    id: 4, username: 'casperathletics', userId: 61, text: '@ziggybrace - ReplyToReply: @rogerbait - Reply: squid axe juice chartreuse laborum. taiyaki in. ',
+    id: 4, username: 'scubaunderwear', userId: 40, text: '@scubaunderwear - Reply: four slow-carb croix santo Hammock carry. ramps chicharrones ', songtime: 339,
+  }, {
+    id: 5, username: 'frictionpuppies', userId: 42, text: '@scubaunderwear - Reply: four slow-carb croix santo Hammock carry. ramps chicharrones ', songtime: 339,
+  }, {
+    id: 6, username: 'scubaunderwear', userId: 40, text: '@frictionpuppies - ReplyToReply: @scubaunderwear - Reply: four slow-carb croix santo Hammock carry. ramps chicharrones ', songtime: 339,
+  }, {
+    id: 7, username: 'bawdyfields', userId: 41, text: '@frictionpuppies - ReplyToReply: @scubaunderwear - Reply: four slow-carb croix santo Hammock carry. ramps chicharrones ', songtime: 339,
   }],
-  songtime: 66,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 7,
-  username: 'poppywanted',
-  userId: 62,
-  text: 'seitan ',
-  replies: [{
-    id: 1, username: 'ziggybrace', userId: 65, text: '@poppywanted - Reply: celiac ',
-  }, {
-    id: 2, username: 'poppywanted', userId: 62, text: '@poppywanted - Reply: celiac ',
-  }, {
-    id: 3, username: 'poppywanted', userId: 62, text: '@poppywanted - Reply: celiac ',
-  }, {
-    id: 4, username: 'poppywanted', userId: 62, text: '@poppywanted - Reply: celiac ',
-  }, {
-    id: 5, username: 'poppywanted', userId: 62, text: '@poppywanted - ReplyToReply: @poppywanted - Reply: celiac ',
-  }, {
-    id: 6, username: 'minnierow', userId: 66, text: '@poppywanted - ReplyToReply: @poppywanted - Reply: celiac ',
-  }, {
-    id: 7, username: 'dexteroverhead', userId: 63, text: '@poppywanted - Reply: celiac ',
-  }, {
-    id: 8, username: 'ziggybrace', userId: 65, text: '@poppywanted - Reply: celiac ',
-  }],
-  songtime: 502,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 8, username: 'frictionpuppies', userId: 42, text: 'Taiyaki heard Beard normcore hexagon polaroid non hashtag sartorial ', songtime: 205, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 9, username: 'sootyapproach', userId: 76, text: 'Sartorial non cillum eiusmod. santo fixie. offal, ', songtime: 154, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 10, username: 'babybjorndictate', userId: 12, text: 'tumblr. edison elit non twee ', songtime: 310, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 11,
-  username: 'harleybillowy',
-  userId: 84,
-  text: 'cornhole disrupt YOLO sint probably bread ',
-  replies: [{
-    id: 1, username: 'alfiecloud', userId: 85, text: '@harleybillowy - Reply: irony af ramps cloud truck Food ',
-  }, {
-    id: 2, username: 'jasmineenquiry', userId: 87, text: '@harleybillowy - Reply: irony af ramps cloud truck Food ',
-  }, {
-    id: 3, username: 'chesterdotnet', userId: 86, text: '@harleybillowy - Reply: irony af ramps cloud truck Food ',
-  }, {
-    id: 4, username: 'harleybillowy', userId: 84, text: '@alfiecloud - ReplyToReply: @harleybillowy - Reply: irony af ramps cloud truck Food ',
-  }, {
-    id: 5, username: 'harleybillowy', userId: 84, text: '@chesterdotnet - ReplyToReply: @harleybillowy - Reply: irony af ramps cloud truck Food ',
-  }, {
-    id: 6, username: 'charlottetreasure', userId: 88, text: '@harleybillowy - ReplyToReply: @alfiecloud - ReplyToReply: @harleybillowy - Reply: irony af ramps cloud truck Food ',
-  }],
-  songtime: 207,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 12, username: 'phoebelunch', userId: 79, text: 'ethical viral park jean ', songtime: 282, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 13, username: 'titingswindler', userId: 32, text: 'Duis tbh tote Keytar ', songtime: 458, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 14, username: 'mimiacid', userId: 91, text: 'bulb id. drinking mug cillum pork echo chambray belly deep ', songtime: 284, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 15, username: 'soakdensity', userId: 17, text: 'fam cold-pressed Beard Pork chambray, ugh shoreditch copper on ', songtime: 585, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 16, username: 'graduateassured', userId: 25, text: 'wolf est meggings Marfa cronut Pork Food esse whatever ', songtime: 452, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 16, username: 'calliebilliards', userId: 78, text: 'waistcoat Keffiyeh fingerstache santo ut microdosing belly crucifix. pop-up. shorts ', songtime: 135, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
   id: 17,
-  username: 'pumpkinburn',
-  userId: 52,
-  text: 'pop-up. ut ea church-key. hell twee kitsch occupy ',
+  username: 'clapmodule',
+  userId: 6,
+  text: 'literally cold-pressed Pug non austin ',
+  songtime: 408,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'fluffyripe', userId: 53, text: '@pumpkinburn - Reply: ea, scenester them do literally truck. Coloring Do ',
+    id: 1, username: 'flagstaffmetallic', userId: 10, text: '@clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
   }, {
-    id: 2, username: 'caramelduets', userId: 57, text: '@pumpkinburn - Reply: ea, scenester them do literally truck. Coloring Do ',
+    id: 2, username: 'buepound', userId: 9, text: '@clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
   }, {
-    id: 3, username: 'graciemothers', userId: 54, text: '@pumpkinburn - Reply: ea, scenester them do literally truck. Coloring Do ',
+    id: 3, username: 'bioticmotherly', userId: 8, text: '@clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
   }, {
-    id: 4, username: 'pebblessassy', userId: 55, text: '@pumpkinburn - Reply: ea, scenester them do literally truck. Coloring Do ',
+    id: 4, username: 'doorbummy', userId: 7, text: '@bioticmotherly - ReplyToReply: @clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
   }, {
-    id: 5, username: 'fluffyripe', userId: 53, text: '@graciemothers - ReplyToReply: @pumpkinburn - Reply: ea, scenester them do literally truck. Coloring Do ',
+    id: 5, username: 'bioticmotherly', userId: 8, text: '@doorbummy - ReplyToReply: @bioticmotherly - ReplyToReply: @clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
   }, {
-    id: 6, username: 'pebblessassy', userId: 55, text: '@pebblessassy - ReplyToReply: @pumpkinburn - Reply: ea, scenester them do literally truck. Coloring Do ',
+    id: 6, username: 'buepound', userId: 9, text: '@bioticmotherly - ReplyToReply: @doorbummy - ReplyToReply: @bioticmotherly - ReplyToReply: @clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
+  }, {
+    id: 7, username: 'bioticmotherly', userId: 8, text: '@bioticmotherly - ReplyToReply: @doorbummy - ReplyToReply: @bioticmotherly - ReplyToReply: @clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
+  }, {
+    id: 8, username: 'bioticmotherly', userId: 8, text: '@bioticmotherly - ReplyToReply: @doorbummy - ReplyToReply: @bioticmotherly - ReplyToReply: @clapmodule - Reply: iceland, ut prism cloud flexitarian ', songtime: 408,
   }],
-  songtime: 540,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 18, username: 'alfiecloud', userId: 85, text: 'polaroid anim culpa Crucifix cronut est ', songtime: 507, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 19, username: 'pebblessassy', userId: 55, text: 'irony slow-carb anim Pinterest ea vegan iceland, kickstarter drinking ', songtime: 187, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 20,
-  username: 'exmoorfeety',
-  userId: 20,
-  text: 'heard ',
+  id: 18,
+  username: 'badlytelescope',
+  userId: 2,
+  text: 'tote fingerstache esse, ',
+  songtime: 356,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'anatexispackage', userId: 23, text: '@exmoorfeety - Reply: skateboard ',
+    id: 1, username: 'doorbummy', userId: 7, text: '@badlytelescope - Reply: occaecat velit. Dolore ', songtime: 356,
+  }, {
+    id: 2, username: 'badlytelescope', userId: 2, text: '@badlytelescope - Reply: occaecat velit. Dolore ', songtime: 356,
+  }, {
+    id: 3, username: 'doorbummy', userId: 7, text: '@badlytelescope - Reply: occaecat velit. Dolore ', songtime: 356,
+  }, {
+    id: 4, username: 'digitsposing', userId: 5, text: '@badlytelescope - Reply: occaecat velit. Dolore ', songtime: 356,
   }],
-  songtime: 392,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 21,
-  username: 'pizzaendless',
-  userId: 38,
-  text: 'bag truck chambray, tilde ',
+  id: 19,
+  username: 'gilbertgrease',
+  userId: 58,
+  text: "Coloring drinking haven't blog fam asymmetrical fixie. XOXO ",
+  songtime: 257,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'scubaunderwear', userId: 40, text: '@pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 1, username: 'casperathletics', userId: 61, text: '@gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }, {
-    id: 2, username: 'bawdyfields', userId: 41, text: '@pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 2, username: 'rogerbait', userId: 60, text: '@gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }, {
-    id: 3, username: 'smagstress', userId: 39, text: '@pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 3, username: 'dexteroverhead', userId: 63, text: '@gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }, {
-    id: 4, username: 'bawdyfields', userId: 41, text: '@bawdyfields - ReplyToReply: @pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 4, username: 'poppywanted', userId: 62, text: '@dexteroverhead - ReplyToReply: @gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }, {
-    id: 5, username: 'pizzaendless', userId: 38, text: '@bawdyfields - ReplyToReply: @bawdyfields - ReplyToReply: @pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 5, username: 'poppywanted', userId: 62, text: '@dexteroverhead - ReplyToReply: @gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }, {
-    id: 6, username: 'bawdyfields', userId: 41, text: '@scubaunderwear - ReplyToReply: @pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 6, username: 'casperathletics', userId: 61, text: '@poppywanted - ReplyToReply: @dexteroverhead - ReplyToReply: @gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }, {
-    id: 7, username: 'discerningjamaican', userId: 43, text: '@bawdyfields - ReplyToReply: @scubaunderwear - ReplyToReply: @pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 7, username: 'casperathletics', userId: 61, text: '@casperathletics - ReplyToReply: @gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }, {
-    id: 8, username: 'bawdyfields', userId: 41, text: '@pizzaendless - ReplyToReply: @bawdyfields - ReplyToReply: @bawdyfields - ReplyToReply: @pizzaendless - Reply: locavore skateboard mollit qui ',
+    id: 8, username: 'gilbertgrease', userId: 58, text: '@poppywanted - ReplyToReply: @dexteroverhead - ReplyToReply: @gilbertgrease - Reply: belly raclette Consequat 8-bit ea You aesthetic chillwave ', songtime: 257,
   }],
-  songtime: 345,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 22, username: 'georgerheology', userId: 94, text: 'polaroid sriracha sriracha ', songtime: 542, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 20, username: 'crushingchomping', userId: 13, text: 'cliche 8-bit ', songtime: 77, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 23, username: 'collagentopping', userId: 30, text: 'pork ', songtime: 257, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 21, username: 'madamewally', userId: 95, text: 'disrupt Jianbing next loko ea, sartorial YOLO ', songtime: 240, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 24,
-  username: 'simbasmaw',
-  userId: 90,
-  text: 'gentrify shorts laborum. ',
+  id: 22,
+  username: 'lunatherapist',
+  userId: 92,
+  text: 'on deep tofu blue incididunt truffaut vinegar truck juice ',
+  songtime: 426,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'simbasmaw', userId: 90, text: '@simbasmaw - Reply: adaptogen. paleo. slow-carb ',
+    id: 1, username: 'madamewally', userId: 95, text: '@lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
   }, {
-    id: 2, username: 'stanleydeimos', userId: 93, text: '@simbasmaw - Reply: adaptogen. paleo. slow-carb ',
+    id: 2, username: 'madamewally', userId: 95, text: '@lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
   }, {
-    id: 3, username: 'georgerheology', userId: 94, text: '@simbasmaw - Reply: adaptogen. paleo. slow-carb ',
+    id: 3, username: 'madamewally', userId: 95, text: '@lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
   }, {
-    id: 4, username: 'simbasmaw', userId: 90, text: '@simbasmaw - Reply: adaptogen. paleo. slow-carb ',
+    id: 4, username: 'madamewally', userId: 95, text: '@madamewally - ReplyToReply: @lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
+  }, {
+    id: 5, username: 'lunatherapist', userId: 92, text: '@madamewally - ReplyToReply: @lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
+  }, {
+    id: 6, username: 'stanleydeimos', userId: 93, text: '@lunatherapist - ReplyToReply: @madamewally - ReplyToReply: @lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
+  }, {
+    id: 7, username: 'madamewally', userId: 95, text: '@stanleydeimos - ReplyToReply: @lunatherapist - ReplyToReply: @madamewally - ReplyToReply: @lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
+  }, {
+    id: 8, username: 'noodlefirefox', userId: 97, text: '@madamewally - ReplyToReply: @lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
+  }, {
+    id: 9, username: 'noodlefirefox', userId: 97, text: '@madamewally - ReplyToReply: @lunatherapist - Reply: a id. ea. enim et cold-pressed before church-key. mug ', songtime: 426,
   }],
-  songtime: 37,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 25, username: 'leoformal', userId: 96, text: 'of ', songtime: 598, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 23, username: 'caramelduets', userId: 57, text: 'offal, v. cliche Consequat polaroid in mixtape kickstarter. ', songtime: 156, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 24, username: 'defendedharness', userId: 46, text: '+1 chambray gastropub pork ', songtime: 362, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 25,
+  username: 'sammyselector',
+  userId: 82,
+  text: 'v carry. celiac ',
+  songtime: 225,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+  replies: [{
+    id: 1, username: 'jasmineenquiry', userId: 87, text: '@sammyselector - Reply: cillum cillum shoreditch ', songtime: 225,
+  }, {
+    id: 2, username: 'sammyselector', userId: 82, text: '@sammyselector - Reply: cillum cillum shoreditch ', songtime: 225,
+  }],
 }, {
   id: 26,
-  username: 'georgerheology',
-  userId: 94,
-  text: 'charcoal helvetica umami ',
+  username: 'sootyapproach',
+  userId: 76,
+  text: 'kickstarter banh santo ',
+  songtime: 379,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'blackyvarnish', userId: 99, text: '@georgerheology - Reply: williamsburg Food Jianbing ',
+    id: 1, username: 'calliebilliards', userId: 78, text: '@sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
   }, {
-    id: 2, username: 'georgerheology', userId: 94, text: '@georgerheology - Reply: williamsburg Food Jianbing ',
+    id: 2, username: 'mewsolstice', userId: 77, text: '@sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
   }, {
-    id: 3, username: 'blackyvarnish', userId: 99, text: '@georgerheology - Reply: williamsburg Food Jianbing ',
+    id: 3, username: 'dianaresearcher', userId: 80, text: '@sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
   }, {
-    id: 4, username: 'calirave', userId: 98, text: '@georgerheology - ReplyToReply: @georgerheology - Reply: williamsburg Food Jianbing ',
+    id: 4, username: 'phoebelunch', userId: 79, text: '@calliebilliards - ReplyToReply: @sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
   }, {
-    id: 5, username: 'madamewally', userId: 95, text: '@georgerheology - ReplyToReply: @georgerheology - Reply: williamsburg Food Jianbing ',
+    id: 5, username: 'mewsolstice', userId: 77, text: '@calliebilliards - ReplyToReply: @sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
   }, {
-    id: 6, username: 'calirave', userId: 98, text: '@blackyvarnish - ReplyToReply: @georgerheology - Reply: williamsburg Food Jianbing ',
+    id: 6, username: 'calliebilliards', userId: 78, text: '@sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
+  }, {
+    id: 7, username: 'jakevirtual', userId: 81, text: '@phoebelunch - ReplyToReply: @calliebilliards - ReplyToReply: @sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
+  }, {
+    id: 8, username: 'mewsolstice', userId: 77, text: '@jakevirtual - ReplyToReply: @phoebelunch - ReplyToReply: @calliebilliards - ReplyToReply: @sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
+  }, {
+    id: 9, username: 'phoebelunch', userId: 79, text: '@dianaresearcher - ReplyToReply: @sootyapproach - Reply: bread Coloring skateboard ', songtime: 379,
   }],
-  songtime: 558,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 27, username: 'lilygrubby', userId: 73, text: 'goth blue truck irony polaroid edison live-edge waistcoat stumptown knausgaard ', songtime: 160, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 27, username: 'phonewhole', userId: 19, text: 'dolore readymade cardigan. truck crucifix. taiyaki hot forage ennui ', songtime: 409, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 28, username: 'wearbiggest', userId: 27, text: 'fanny ', songtime: 236, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 28, username: 'mimiacid', userId: 91, text: 'adipisicing ', songtime: 471, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 29, username: 'digitsposing', userId: 5, text: 'hexagon pork wolf offal, etsy williamsburg plaid ', songtime: 573, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 29, username: 'stanleydeimos', userId: 93, text: 'Narwhal fixie messenger ', songtime: 478, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 30, username: 'closedobliging', userId: 37, text: 'la blue af it ', songtime: 37, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 30, username: 'crushingchomping', userId: 13, text: 'ea ', songtime: 497, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 31, username: 'iteratorextremum', userId: 24, text: 'moon deep Authentic ', songtime: 208, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 31, username: 'doorbummy', userId: 7, text: 'tacos butcher bread heard whatever squid tote chambray ', songtime: 317, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 32, username: 'iteratorextremum', userId: 24, text: 'excepteur paleo. of belly squid ', songtime: 53, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 32, username: 'ruppellsynapse', userId: 3, text: 'everyday truck Single-origin skateboard succulents Sartorial ', songtime: 559, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 33, username: 'trojanusable', userId: 45, text: 'heard ut kitsch ', songtime: 573, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 33, username: 'gegenscheincisco', userId: 1, text: 'keffiyeh dolore truck art ', songtime: 556, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 34, username: 'wearbiggest', userId: 27, text: 'cillum mug denim messenger ', songtime: 83, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 35, username: 'caramelduets', userId: 57, text: 'post-ironic poke. truck deep paleo. artisan deep shoreditch post-ironic park ', songtime: 217, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 36, username: 'flagstaffmetallic', userId: 10, text: 'ut quis williamsburg, kitsch ', songtime: 432, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 37, username: 'angelshying', userId: 83, text: "haven't listicle ", songtime: 113, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 38, username: 'titingswindler', userId: 32, text: 'portland book vegan hexagon booth letterpress cred kitsch ', songtime: 397, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 39,
-  username: 'buddycooling',
-  userId: 74,
-  text: 'dolor, laborum pop-up retro, Sunt forage ',
-  replies: [{
-    id: 1, username: 'mewsolstice', userId: 77, text: '@buddycooling - Reply: minim austin slow-carb YOLO Pug ethical ',
-  }, {
-    id: 2, username: 'phoebelunch', userId: 79, text: '@buddycooling - Reply: minim austin slow-carb YOLO Pug ethical ',
-  }],
-  songtime: 496,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 40,
-  username: 'spanishopengl',
-  userId: 14,
-  text: 'tacos non excepteur bag waistcoat ea anim ',
-  replies: [{
-    id: 1, username: 'shirtpoodle', userId: 18, text: '@spanishopengl - Reply: Authentic magna austin skateboard occaecat of skateboard ',
-  }],
-  songtime: 189,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 41,
-  username: 'buddycooling',
-  userId: 74,
-  text: 'proident sint Humblebrag sriracha reprehenderit. id. shoreditch ',
-  replies: [{
-    id: 1, username: 'sootyapproach', userId: 76, text: '@buddycooling - Reply: tote shorts you santo polaroid croix YOLO ',
-  }, {
-    id: 2, username: 'buddycooling', userId: 74, text: '@buddycooling - Reply: tote shorts you santo polaroid croix YOLO ',
-  }, {
-    id: 3, username: 'buddycooling', userId: 74, text: '@buddycooling - Reply: tote shorts you santo polaroid croix YOLO ',
-  }, {
-    id: 4, username: 'charliescales', userId: 75, text: '@sootyapproach - ReplyToReply: @buddycooling - Reply: tote shorts you santo polaroid croix YOLO ',
-  }, {
-    id: 5, username: 'phoebelunch', userId: 79, text: '@sootyapproach - ReplyToReply: @buddycooling - Reply: tote shorts you santo polaroid croix YOLO ',
-  }, {
-    id: 6, username: 'phoebelunch', userId: 79, text: '@buddycooling - Reply: tote shorts you santo polaroid croix YOLO ',
-  }, {
-    id: 7, username: 'mewsolstice', userId: 77, text: '@phoebelunch - ReplyToReply: @buddycooling - Reply: tote shorts you santo polaroid croix YOLO ',
-  }],
-  songtime: 257,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 42, username: 'snickerscaper', userId: 59, text: 'austin bulb kombucha ', songtime: 106, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 43, username: 'mollyvanadium', userId: 64, text: 'poke. aute palo bread cold-pressed Keffiyeh Vexillologist incididunt Sunt helvetica ', songtime: 502, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 44, username: 'stenchwooly', userId: 36, text: 'YOLO offal probably normcore Cronut axe deserunt kickstarter fixie ', songtime: 182, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 45, username: 'closedobliging', userId: 37, text: 'culpa scenester Jianbing do ut asymmetrical marfa Cronut schlitz literally, ', songtime: 490, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 46, username: 'phonewhole', userId: 19, text: 'tilde put probably polaroid consectetur fanny nisi messenger ', songtime: 124, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
-}, {
-  id: 47,
+  id: 34,
   username: 'poppywanted',
   userId: 62,
-  text: "hexagon pack. food prism charcoal distillery haven't hot kickstarter. est ",
+  text: 'Activated snackwave. Jianbing venmo cold-pressed food Marfa them est gastropub ',
+  songtime: 40,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
   replies: [{
-    id: 1, username: 'poppywanted', userId: 62, text: '@poppywanted - Reply: ut beard Freegan skateboard Ad anim. edison jean beard laborum ',
+    id: 1, username: 'shadowpug', userId: 67, text: '@poppywanted - Reply: eiusmod v. raclette tote out heard truck hexagon carry. tote ', songtime: 40,
+  }, {
+    id: 2, username: 'ziggybrace', userId: 65, text: '@poppywanted - Reply: eiusmod v. raclette tote out heard truck hexagon carry. tote ', songtime: 40,
+  }, {
+    id: 3, username: 'poppywanted', userId: 62, text: '@poppywanted - Reply: eiusmod v. raclette tote out heard truck hexagon carry. tote ', songtime: 40,
+  }, {
+    id: 4, username: 'ziggybrace', userId: 65, text: '@shadowpug - ReplyToReply: @poppywanted - Reply: eiusmod v. raclette tote out heard truck hexagon carry. tote ', songtime: 40,
+  }, {
+    id: 5, username: 'ziggybrace', userId: 65, text: '@shadowpug - ReplyToReply: @poppywanted - Reply: eiusmod v. raclette tote out heard truck hexagon carry. tote ', songtime: 40,
+  }, {
+    id: 6, username: 'ziggybrace', userId: 65, text: '@ziggybrace - ReplyToReply: @shadowpug - ReplyToReply: @poppywanted - Reply: eiusmod v. raclette tote out heard truck hexagon carry. tote ', songtime: 40,
   }],
-  songtime: 314,
-  timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
 }, {
-  id: 48, username: 'motivatedpabs', userId: 35, text: 'eiusmod. aliqua them echo offal, ', songtime: 321, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 35, username: 'princesswidgeon', userId: 70, text: 'organic. tacos on poutine. church-key loko ', songtime: 444, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 49, username: 'bookmarkdweeb', userId: 34, text: 'beard v ', songtime: 240, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 36, username: 'windlassslacket', userId: 21, text: 'juice mug charcoal truffaut forage YOLO austin church-key. ', songtime: 153, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
 }, {
-  id: 50, username: 'melonnautical', userId: 15, text: 'ea scenester santo moon cronut ', songtime: 514, timestamp: 'Wed Jul 25 2018 18:14:19 GMT-0700 (PDT)',
+  id: 37, username: 'dianaresearcher', userId: 80, text: 'croix 8-bit denim you man esse deep ', songtime: 583, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 38, username: 'phonewhole', userId: 19, text: 'Food chambray ', songtime: 458, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 39, username: 'noodlefirefox', userId: 97, text: 'lyft aute health celiac aute, bespoke kickstarter pack asymmetrical Cronut ', songtime: 197, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 40,
+  username: 'clockeyupper',
+  userId: 48,
+  text: 'tote ',
+  songtime: 551,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+  replies: [{
+    id: 1, username: 'mariehighland', userId: 50, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 2, username: 'clockeyupper', userId: 48, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 3, username: 'clockeyupper', userId: 48, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 4, username: 'clockeyupper', userId: 48, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 5, username: 'fluffyripe', userId: 53, text: '@clockeyupper - ReplyToReply: @clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 6, username: 'pumpkinburn', userId: 52, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 7, username: 'snowballbollard', userId: 51, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 8, username: 'wrigglecounting', userId: 49, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }, {
+    id: 9, username: 'pumpkinburn', userId: 52, text: '@clockeyupper - Reply: stumptown ', songtime: 551,
+  }],
+}, {
+  id: 41,
+  username: 'mollyvanadium',
+  userId: 64,
+  text: 'prism chambray ',
+  songtime: 370,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+  replies: [{
+    id: 1, username: 'ziggybrace', userId: 65, text: '@mollyvanadium - Reply: wolf, authentic, ', songtime: 370,
+  }, {
+    id: 2, username: 'ziggybrace', userId: 65, text: '@mollyvanadium - Reply: wolf, authentic, ', songtime: 370,
+  }, {
+    id: 3, username: 'minnierow', userId: 66, text: '@mollyvanadium - Reply: wolf, authentic, ', songtime: 370,
+  }],
+}, {
+  id: 42, username: 'soakdensity', userId: 17, text: 'quis ', songtime: 297, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 43, username: 'calliebilliards', userId: 78, text: '3 juice Listicle nisi mug. seitan vegan, quinoa ', songtime: 372, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 44, username: 'trojanusable', userId: 45, text: 'schlitz austin ', songtime: 424, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 45,
+  username: 'bowelstimb',
+  userId: 26,
+  text: 'Listicle four v excepteur ',
+  songtime: 294,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+  replies: [{
+    id: 1, username: 'collagentopping', userId: 30, text: '@bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }, {
+    id: 2, username: 'fillybongue', userId: 29, text: '@bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }, {
+    id: 3, username: 'seriouspushing', userId: 28, text: '@bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }, {
+    id: 4, username: 'wearbiggest', userId: 27, text: '@collagentopping - ReplyToReply: @bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }, {
+    id: 5, username: 'collagentopping', userId: 30, text: '@fillybongue - ReplyToReply: @bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }, {
+    id: 6, username: 'bowelstimb', userId: 26, text: '@collagentopping - ReplyToReply: @bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }, {
+    id: 7, username: 'trachytevela', userId: 31, text: '@seriouspushing - ReplyToReply: @bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }, {
+    id: 8, username: 'seriouspushing', userId: 28, text: '@collagentopping - ReplyToReply: @fillybongue - ReplyToReply: @bowelstimb - Reply: irony fingerstache williamsburg, bottle ', songtime: 294,
+  }],
+}, {
+  id: 46,
+  username: 'spanishopengl',
+  userId: 14,
+  text: 'Coloring sartorial ',
+  songtime: 199,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+  replies: [{
+    id: 1, username: 'phonewhole', userId: 19, text: '@spanishopengl - Reply: truck probably ', songtime: 199,
+  }, {
+    id: 2, username: 'melonnautical', userId: 15, text: '@spanishopengl - Reply: truck probably ', songtime: 199,
+  }, {
+    id: 3, username: 'melonnautical', userId: 15, text: '@spanishopengl - Reply: truck probably ', songtime: 199,
+  }, {
+    id: 4, username: 'melonnautical', userId: 15, text: '@phonewhole - ReplyToReply: @spanishopengl - Reply: truck probably ', songtime: 199,
+  }, {
+    id: 5, username: 'shirtpoodle', userId: 18, text: '@melonnautical - ReplyToReply: @spanishopengl - Reply: truck probably ', songtime: 199,
+  }],
+}, {
+  id: 47, username: 'gegenscheincisco', userId: 1, text: 'in. vegan laborum scenester of pinterest et ', songtime: 82, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 48, username: 'snickerscaper', userId: 59, text: 'Beard bird ', songtime: 187, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 49, username: 'calliebilliards', userId: 78, text: 'hoodie fanny truck ea drinking ut meggings bread v. jean ', songtime: 351, timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+}, {
+  id: 50,
+  username: 'clockeyupper',
+  userId: 48,
+  text: 'aliqua, hexagon hashtag ',
+  songtime: 407,
+  timestamp: 'Mon Jul 30 2018 04:13:40 GMT-0700 (PDT)',
+  replies: [{
+    id: 1, username: 'clockeyupper', userId: 48, text: '@clockeyupper - Reply: ut celiac tbh ', songtime: 407,
+  }, {
+    id: 2, username: 'mariehighland', userId: 50, text: '@clockeyupper - Reply: ut celiac tbh ', songtime: 407,
+  }, {
+    id: 3, username: 'pumpkinburn', userId: 52, text: '@clockeyupper - Reply: ut celiac tbh ', songtime: 407,
+  }, {
+    id: 4, username: 'clockeyupper', userId: 48, text: '@clockeyupper - ReplyToReply: @clockeyupper - Reply: ut celiac tbh ', songtime: 407,
+  }, {
+    id: 5, username: 'fluffyripe', userId: 53, text: '@clockeyupper - ReplyToReply: @clockeyupper - Reply: ut celiac tbh ', songtime: 407,
+  }, {
+    id: 6, username: 'snowballbollard', userId: 51, text: '@clockeyupper - Reply: ut celiac tbh ', songtime: 407,
+  }, {
+    id: 7, username: 'fluffyripe', userId: 53, text: '@pumpkinburn - ReplyToReply: @clockeyupper - Reply: ut celiac tbh ', songtime: 407,
+  }],
 }];
 
 module.exports = sampleData;
