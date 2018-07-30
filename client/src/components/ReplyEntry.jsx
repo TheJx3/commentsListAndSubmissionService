@@ -31,12 +31,30 @@ const Content = styled.div`
 
 // components
 const ReplyEntry = ({reply}) => {
+  const secondsToTime = (songTime) => {
+    songTime = Math.floor(songTime);
+    let result;
+    let hours = Math.floor(songTime / 3600);
+    let minutes = Math.floor(songTime - (hours * 3600)) / 60;
+    let seconds = songTime % 60;
+
+    if (hours > 0) {
+      result = Math.floor(hours);
+      result += `:${(minutes < 10 ? "0" + Math.floor(minutes) : minutes)}`;
+      result += `:${(seconds < 10 ? "0" + Math.floor(seconds) : seconds)}`;
+    } else {
+      result = `${Math.floor(minutes) + ':' + (seconds < 10 ? "0" + Math.floor(seconds) : seconds)}`;
+    }
+
+    return result;
+  }
+
   return (
     <ReplyContainer>
-      <Avatar><i class="far fa-user-circle fa-2x"></i></Avatar>
+      <Avatar><a href='#'><i className="far fa-user-circle fa-2x"></i></a></Avatar>
       <ReplyContent>
         <ReplyUser>
-          <a href='#'>{reply.username}</a>
+          <a href='#'>{reply.username}</a> at <a href='#'>{secondsToTime(reply.songtime)}</a>
         </ReplyUser>
         <Content>
           {reply.text}
