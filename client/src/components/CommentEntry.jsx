@@ -23,7 +23,7 @@ const CommentContent = styled.div`
 
 const CommentUser = styled.div`
   font-size: 12px;
-  color: #999;
+  color: #ccc;
 `
 const Content = styled.div`
   font-size: 12px;
@@ -51,10 +51,10 @@ const CommentEntry = ({comment}) => {
 
   return (
     <CommentContainer>
-      <Avatar></Avatar> 
+      <Avatar><i class="fas fa-user-circle fa-2x"></i></Avatar>
       <CommentContent>
         <CommentUser>
-          {comment.username} at {secondsToTime(comment.songtime)}
+          <a href='#'>{comment.username}</a> at <a href='#'>{secondsToTime(comment.songtime)}</a>
         </CommentUser>
         <Content>
           {comment.text}

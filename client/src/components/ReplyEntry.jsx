@@ -33,10 +33,10 @@ const Content = styled.div`
 const ReplyEntry = ({reply}) => {
   return (
     <ReplyContainer>
-      <Avatar></Avatar>
+      <Avatar><i class="far fa-user-circle fa-2x"></i></Avatar>
       <ReplyContent>
         <ReplyUser>
-          {reply.username}
+          <a href='#'>{reply.username}</a>
         </ReplyUser>
         <Content>
           {reply.text}
