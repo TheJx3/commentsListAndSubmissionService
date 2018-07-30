@@ -51,7 +51,7 @@ const CommentEntry = ({comment}) => {
 
   return (
     <CommentContainer>
-      <Avatar><i class="fas fa-user-circle fa-2x"></i></Avatar>
+      <Avatar><a href='#'><i className="fas fa-user-circle fa-2x"></i></a></Avatar>
       <CommentContent>
         <CommentUser>
           <a href='#'>{comment.username}</a> at <a href='#'>{secondsToTime(comment.songtime)}</a>
