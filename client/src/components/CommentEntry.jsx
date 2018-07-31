@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'; 
 import RepliesList from './RepliesList';
+import ReactTimeAgo from 'react-time-ago';
 
 // styles
 const CommentContainer = styled.div`
@@ -8,6 +9,7 @@ const CommentContainer = styled.div`
   width: auto;
   display: flex;
   flex-direction: column;
+  margin: 10px 0px 20px 0px;
   `;
   
 const CommentContent = styled.div`
@@ -42,14 +44,19 @@ const CommentText = styled.div`
 const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 12px;
-  margin-left: 10px;
   flex-basis: 15%;
+  font-size: 12px;
+  margin: 0px 10px 0px 0px;
+  text-align: right; 
+  color: #999;
 `;
 
-const TimeAgo = styled.div`
-`;
-
+const ReplyButton = styled.button`
+  height: 28px; 
+  width: 32px;
+  color: #999; 
+  margin-left: 100px;
+`
 // components
 
 const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
@@ -86,7 +93,10 @@ const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
         <CommentText>{text}</CommentText>
       </Content>
       <RightContainer>
-        <TimeAgo>{timestamp}</TimeAgo>
+          <ReactTimeAgo>{timestamp}</ReactTimeAgo>
+          <ReplyButton>
+            <i class="fas fa-reply fa-lg" />
+          </ReplyButton>
       </RightContainer>  
       </CommentContent>
       <RepliesList repliesList={replies}/>

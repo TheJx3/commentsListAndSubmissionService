@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactTimeAgo from 'react-time-ago';
 
 // styles
 const ReplyContainer = styled.div`
@@ -7,6 +8,7 @@ const ReplyContainer = styled.div`
   width: auto;
   display: flex;
   flex-direction: column;
+  margin: 10px 0px 20px 0px;
   `;
 
 const ReplyContent = styled.div`
@@ -40,14 +42,20 @@ const ReplyText = styled.div`
 
 const RightContainer = styled.div`
   display: flex;
+  flex-basis: 15%;
   flex-direction: column;
   font-size: 12px;
-  margin-left: 10px;
-  flex-basis: 15%;
+  margin: 0px 10px 0px 0px;
+  text-align: right; 
+  color: #999;
 `;
 
-const TimeAgo = styled.div`
-`;
+const ReplyButton = styled.button`
+  height: 28px; 
+  width: 32px;
+  color: #999;  
+  margin-left: 100px;
+`
 
 // components
 const ReplyEntry = ({username, songtime, text, timestamp}) => {
@@ -82,7 +90,10 @@ const ReplyEntry = ({username, songtime, text, timestamp}) => {
         <ReplyText>{text}</ReplyText>
       </Content>
       <RightContainer>
-        <TimeAgo>{timestamp}</TimeAgo>
+        <ReactTimeAgo>{timestamp}</ReactTimeAgo>
+        <ReplyButton>
+          <i class="fas fa-reply fa-lg" />
+        </ReplyButton>
       </RightContainer>
       </ReplyContent>
     </ReplyContainer>
