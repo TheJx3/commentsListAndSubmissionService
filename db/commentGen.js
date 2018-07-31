@@ -105,6 +105,9 @@ const users = [
   'blackyvarnish',
 ];
 
+// Random Date Generator
+const randomDate = (start, end) => new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())).getTime();
+
 // GENERATOR
 const commentGen = (hipString) => {
   const comments = [];
@@ -124,14 +127,14 @@ const commentGen = (hipString) => {
       message += `${hipArray[Math.floor(Math.random() * hipArray.length)]} `;
     }
     comment.text = message;
-    
+
     // songtime, timestamp
     comment.songtime = Math.round(Math.random() * 600);
-    comment.timestamp = Date();
+    comment.timestamp = randomDate(new Date(2018, 0, 1), new Date());
 
     // replies
     if (comment.userId % 2 === 0 && comment.username.length < 15) {
-      let randomNumber = Math.floor(Math.random() * 11);
+      const randomNumber = Math.floor(Math.random() * 11);
       let replyMessage = '';
       for (let wordCount = 0; wordCount < maxWordCount; wordCount += 1) {
         replyMessage += `${hipArray[Math.floor(Math.random() * hipArray.length)]} `;
@@ -145,14 +148,15 @@ const commentGen = (hipString) => {
         reply.text = `@${comment.username} - Reply: ${replyMessage}`;
         reply.songtime = comment.songtime;
         if (comment.replies.length > 2) {
-          let repliedTo = Math.round(Math.random() * 10);
+          const repliedTo = Math.round(Math.random() * 10);
           if (repliedTo < 3) {
             reply.text = `@${comment.username} - Reply: ${replyMessage}`;
           } else {
-            let randomUserRepliedTo = Math.floor(Math.random() * comment.replies.length);
+            const randomUserRepliedTo = Math.floor(Math.random() * comment.replies.length);
             reply.text = `@${comment.replies[randomUserRepliedTo].username} - ReplyToReply: ${comment.replies[randomUserRepliedTo].text}`;
           }
         }
+        reply.timestamp = randomDate(new Date(2018, 0, 1), new Date());
         comment.replies.push(reply);
         reply = {};
       }
@@ -162,11 +166,10 @@ const commentGen = (hipString) => {
       delete comment.replies;
     }
 
-
     comments.push(comment);
   }
   return comments;
 };
 
 const data = JSON.stringify(commentGen(hipster));
-fs.writeFile('./db/sampleCommentData.JSON', data, err => (err ? console.log('error occured: ', err) : console.log('sampleCommentData saved.')));
+fs.writeFile('./db/sampleCommentData.js', data, err => (err ? console.log('error occured: ', err) : console.log('sampleCommentData saved.')));
