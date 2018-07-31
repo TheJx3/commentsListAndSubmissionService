@@ -4,33 +4,53 @@ import styled from 'styled-components';
 // styles
 const ReplyContainer = styled.div`
   height: auto;
-  width: 500px;
+  width: auto;
   display: flex;
-  margin: 22px 5px 1px 5px;
-`
-
-const Avatar = styled.div`
-  height: 40px;
-  min-width: 40px; 
-  border: 2px solid cyan; 
-  margin-right: 8px;
-`;
+  flex-direction: column;
+  `;
 
 const ReplyContent = styled.div`
   display: flex;
-  flex-direction: column
-`
-const ReplyUser = styled.div`
-  font-size: 12px;
-  color: #999;
+  flex-direction: row;
+  width: auto;
+  margin-left: 30px;
+`;
+
+const Avatar = styled.div`
+  height: 40px;
+  border: 2px solid cyan; 
+  flex-basis: 5%;
 `;
 
 const Content = styled.div`
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
+  margin: 0 0 30px 10px;
+  flex-basis: 80%;
+`;
+
+const ReplyUser = styled.div`
+  color: #ccc;
+`;
+
+const ReplyText = styled.div`
+  color: black;
+`;
+
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin-left: 10px;
+  flex-basis: 15%;
+`;
+
+const TimeAgo = styled.div`
 `;
 
 // components
-const ReplyEntry = ({reply}) => {
+const ReplyEntry = ({username, songtime, text, timestamp}) => {
   const secondsToTime = (songTime) => {
     songTime = Math.floor(songTime);
     let result;
@@ -51,14 +71,19 @@ const ReplyEntry = ({reply}) => {
 
   return (
     <ReplyContainer>
-      <Avatar><a href='#'><i className="far fa-user-circle fa-2x"></i></a></Avatar>
       <ReplyContent>
+      <Avatar>
+        <a href='#'><i className="far fa-user-circle fa-2x"></i></a>
+      </Avatar>
+      <Content>
         <ReplyUser>
-          <a href='#'>{reply.username}</a> at <a href='#'>{secondsToTime(reply.songtime)}</a>
+          <a href='#'>{username}</a> at <a href='#'>{secondsToTime(songtime)}</a>
         </ReplyUser>
-        <Content>
-          {reply.text}
-        </Content>
+        <ReplyText>{text}</ReplyText>
+      </Content>
+      <RightContainer>
+        <TimeAgo>{timestamp}</TimeAgo>
+      </RightContainer>
       </ReplyContent>
     </ReplyContainer>
   )

@@ -1,36 +1,58 @@
 import React from 'react';
 import styled from 'styled-components'; 
-import ReplyEntry from './ReplyEntry';
+import RepliesList from './RepliesList';
 
 // styles
 const CommentContainer = styled.div`
   height: auto;
-  width: 600px;
+  width: auto;
   display: flex;
-  margin: 5px 5px 10px 5px;
-`
+  flex-direction: column;
+  `;
+  
+const CommentContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  margin-left: 10px;
+`;
 
 const Avatar = styled.div`
   height: 40px;
-  min-width: 40px; 
   border: 2px solid cyan; 
-  margin-right: 8px;
-`
-const CommentContent = styled.div`
+  flex-basis: 5%;
+`;
+  
+const Content = styled.div`
   display: flex;
-  flex-direction: column
-`
+  flex-direction: column;
+  font-size: 12px;
+  margin: 0 0 30px 10px;
+  flex-basis: 80%;
+`;
 
 const CommentUser = styled.div`
-  font-size: 12px;
   color: #ccc;
-`
-const Content = styled.div`
+`;
+
+const CommentText = styled.div`
+  color: black;
+`;
+
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
+  margin-left: 10px;
+  flex-basis: 15%;
+`;
+
+const TimeAgo = styled.div`
 `;
 
 // components
-const CommentEntry = ({comment}) => {
+
+const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
   const secondsToTime = (songTime) => {
     songTime = Math.floor(songTime);
     let result;
@@ -45,26 +67,29 @@ const CommentEntry = ({comment}) => {
     } else {
       result = `${Math.floor(minutes) + ':' + (seconds < 10 ? "0" + Math.floor(seconds) : seconds)}`;
     }
-
+    console.log(replies)
     return result;
   }
 
   return (
     <CommentContainer>
-      <Avatar><a href='#'><i className="fas fa-user-circle fa-2x"></i></a></Avatar>
       <CommentContent>
+      <Avatar>
+        <a href='#'>
+          <i className="fas fa-user-circle fa-2x"/>
+        </a>
+      </Avatar>
+      <Content>
         <CommentUser>
-          <a href='#'>{comment.username}</a> at <a href='#'>{secondsToTime(comment.songtime)}</a>
+          <a href='#'>{username}</a> at <a href='#'>{secondsToTime(songtime)}</a>
         </CommentUser>
-        <Content>
-          {comment.text}
-        </Content>
-
-          <div>
-            {comment.replies.map(reply => <ReplyEntry key={reply.id} reply={reply} />)}
-          </div>
-
+        <CommentText>{text}</CommentText>
+      </Content>
+      <RightContainer>
+        <TimeAgo>{timestamp}</TimeAgo>
+      </RightContainer>  
       </CommentContent>
+      <RepliesList repliesList={replies}/>
     </CommentContainer>
   )
 };
