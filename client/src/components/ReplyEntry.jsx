@@ -87,10 +87,14 @@ const ReplyEntry = ({username, songtime, text, timestamp}) => {
         <ReplyUser>
           <a href='#'>{username}</a> at <a href='#'>{secondsToTime(songtime)}</a>
         </ReplyUser>
-        <ReplyText>{text}</ReplyText>
+        <ReplyText>
+          {text}
+        </ReplyText>
       </Content>
       <RightContainer>
-        <ReactTimeAgo>{timestamp}</ReactTimeAgo>
+        <ReactTimeAgo>
+          {timestamp}
+        </ReactTimeAgo>
         <ReplyButton>
           <i class="fas fa-reply fa-lg" />
         </ReplyButton>

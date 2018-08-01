@@ -90,10 +90,14 @@ const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
         <CommentUser>
           <a href='#'>{username}</a> at <a href='#'>{secondsToTime(songtime)}</a>
         </CommentUser>
-        <CommentText>{text}</CommentText>
+        <CommentText>
+          {text}
+        </CommentText>
       </Content>
       <RightContainer>
-          <ReactTimeAgo>{timestamp}</ReactTimeAgo>
+          <ReactTimeAgo>
+            {timestamp}
+          </ReactTimeAgo>
           <ReplyButton>
             <i class="fas fa-reply fa-lg" />
           </ReplyButton>
