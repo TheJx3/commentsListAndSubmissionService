@@ -74,7 +74,6 @@ const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
     } else {
       result = `${Math.floor(minutes) + ':' + (seconds < 10 ? "0" + Math.floor(seconds) : seconds)}`;
     }
-    console.log(replies)
     return result;
   }
 
@@ -99,7 +98,7 @@ const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
             {timestamp}
           </ReactTimeAgo>
           <ReplyButton>
-            <i class="fas fa-reply fa-lg" />
+            <i className="fas fa-reply fa-lg" />
           </ReplyButton>
       </RightContainer>  
       </CommentContent>

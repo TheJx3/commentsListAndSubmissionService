@@ -96,7 +96,7 @@ const ReplyEntry = ({username, songtime, text, timestamp}) => {
           {timestamp}
         </ReactTimeAgo>
         <ReplyButton>
-          <i class="fas fa-reply fa-lg" />
+          <i className="fas fa-reply fa-lg" />
         </ReplyButton>
       </RightContainer>
       </ReplyContent>
