@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   getComments() {
-    $.get('api/songs/songId/comments', (data) => {
+    $.get('http://localhost:1458/api/songs/songId/comments', (data) => {
       this.setState({
         comments: data,
       });
