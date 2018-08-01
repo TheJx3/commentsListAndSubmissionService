@@ -1,36 +1,64 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactTimeAgo from 'react-time-ago';
 
 // styles
 const ReplyContainer = styled.div`
   height: auto;
-  width: 500px;
+  width: auto;
   display: flex;
-  margin: 22px 5px 1px 5px;
-`
-
-const Avatar = styled.div`
-  height: 40px;
-  min-width: 40px; 
-  border: 2px solid cyan; 
-  margin-right: 8px;
-`;
+  flex-direction: column;
+  margin: 10px 0px 20px 0px;
+  `;
 
 const ReplyContent = styled.div`
   display: flex;
-  flex-direction: column
-`
-const ReplyUser = styled.div`
-  font-size: 12px;
-  color: #999;
+  flex-direction: row;
+  width: auto;
+  margin-left: 30px;
+`;
+
+const Avatar = styled.div`
+  height: 40px;
+  border: 2px solid cyan; 
+  flex-basis: 5%;
 `;
 
 const Content = styled.div`
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
+  margin: 0 0 30px 10px;
+  flex-basis: 80%;
 `;
 
+const ReplyUser = styled.div`
+  color: #ccc;
+`;
+
+const ReplyText = styled.div`
+  color: black;
+`;
+
+const RightContainer = styled.div`
+  display: flex;
+  flex-basis: 15%;
+  flex-direction: column;
+  font-size: 12px;
+  margin: 0px 10px 0px 0px;
+  text-align: right; 
+  color: #999;
+`;
+
+const ReplyButton = styled.button`
+  height: 28px; 
+  width: 32px;
+  color: #999;  
+  margin-left: 100px;
+`
+
 // components
-const ReplyEntry = ({reply}) => {
+const ReplyEntry = ({username, songtime, text, timestamp}) => {
   const secondsToTime = (songTime) => {
     songTime = Math.floor(songTime);
     let result;
@@ -51,14 +79,26 @@ const ReplyEntry = ({reply}) => {
 
   return (
     <ReplyContainer>
-      <Avatar><a href='#'><i className="far fa-user-circle fa-2x"></i></a></Avatar>
       <ReplyContent>
+      <Avatar>
+        <a href='#'><i className="far fa-user-circle fa-2x"></i></a>
+      </Avatar>
+      <Content>
         <ReplyUser>
-          <a href='#'>{reply.username}</a> at <a href='#'>{secondsToTime(reply.songtime)}</a>
+          <a href='#'>{username}</a> at <a href='#'>{secondsToTime(songtime)}</a>
         </ReplyUser>
-        <Content>
-          {reply.text}
-        </Content>
+        <ReplyText>
+          {text}
+        </ReplyText>
+      </Content>
+      <RightContainer>
+        <ReactTimeAgo>
+          {timestamp}
+        </ReactTimeAgo>
+        <ReplyButton>
+          <i class="fas fa-reply fa-lg" />
+        </ReplyButton>
+      </RightContainer>
       </ReplyContent>
     </ReplyContainer>
   )

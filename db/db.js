@@ -12,7 +12,7 @@ const repliesSchema = new mongoose.Schema({
   username: String,
   userId: Number,
   songtime: Number,
-  timestamp: Date,
+  timestamp: Number,
   text: String,
 });
 
@@ -21,7 +21,7 @@ const commentsSchema = new mongoose.Schema({
   username: String,
   userId: Number,
   songtime: Number,
-  timestamp: Date,
+  timestamp: Number,
   text: String,
   replies: [repliesSchema],
 });
