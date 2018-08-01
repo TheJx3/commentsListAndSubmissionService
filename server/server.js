@@ -1,8 +1,11 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const mongoDB = require('../db/db.js');
 
 const app = express();
+
+app.use(cors());
 
 app.use((req, res, next) => {
   console.log(req.method, req.path);
