@@ -80,13 +80,13 @@ const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
 
   return (
     <div className={styles.entriesContainer}>
-      <div className={styles.content}>
+      <div className={styles.commentContent}>
       <div className={styles.avatar}>
         <a href='#'>
           <i className="fas fa-user-circle fa-2x"/>
         </a>
       </div>
-      <div className={styles.commentContent}>
+      <div className={styles.content}>
         <div className={styles.user}>
           <a href='#'>{username}</a> at <a href='#'>{secondsToTime(songtime)}</a>
         </div>
@@ -98,9 +98,9 @@ const CommentEntry = ({username, songtime, text, timestamp, replies}) => {
           <ReactTimeAgo>
             {timestamp}
           </ReactTimeAgo>
-          <div className={styles.replyButton}>
+          <button className={styles.replyButton}>
             <i className="fas fa-reply fa-lg" />
-          </div>
+          </button>
       </div>  
       </div>
       <RepliesList repliesList={replies}/>

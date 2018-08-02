@@ -82,11 +82,11 @@ const ReplyEntry = ({username, songtime, text, timestamp}) => {
 
   return (
     <div className={styles.entriesContainer}>
-      <div className={styles.content}>
+      <div className={styles.replyContent}>
         <div className={styles.avatar}>
           <a href='#'><i className="far fa-user-circle fa-2x"></i></a>
         </div>
-        <div className={styles.replyContent}>
+        <div className={styles.content}>
           <div className={styles.user}>
           <a href='#'>{username}</a> at <a href='#'>{secondsToTime(songtime)}</a>
           </div>
@@ -98,9 +98,9 @@ const ReplyEntry = ({username, songtime, text, timestamp}) => {
         <ReactTimeAgo>
           {timestamp}
         </ReactTimeAgo>
-          <div className={styles.replyButton}>
+          <button className={styles.replyButton}>
           <i className="fas fa-reply fa-lg" />
-        </div>
+        </button>
       </div>
       </div>
     </div>
