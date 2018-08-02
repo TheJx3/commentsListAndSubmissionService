@@ -1,5 +1,5 @@
 /* COMMENTS AND REPLIES */
-:local(.entriesContainer) {
+.entriesContainer {
   height: auto;
   width: auto;
   display: flex;
@@ -7,13 +7,13 @@
   margin: 10px 0px 20px 0px;
 }
 
-:local(.avatar) {
+.avatar {
   height: 40px;
   border: 2px solid cyan; 
   flex-basis: 5%; 
 }
 
-:local(.content) {
+.content {
   display: flex;
   flex-direction: column;
   font-size: 12px;
@@ -21,15 +21,15 @@
   flex-basis: 80%;
 }
 
-:local(.user) {
+.user {
   color: #ccc;
 } 
 
-:local(.text) {
+.text {
   color: black;
 }
 
-:local(.rightContainer) {
+.rightContainer {
   display: flex;
   flex-basis: 15%;
   flex-direction: column;
@@ -39,7 +39,7 @@
   color: #999;
 }
 
-:local(.replyButton) {
+.replyButton {
   height: 28px; 
   width: 32px;
   color: #999; 
@@ -47,7 +47,7 @@
 }
 
 /* COMMENTS SPECIFIC */
-:local(.commentContent) {
+.commentContent {
   display: flex;
   flex-direction: row;
   width: auto;
@@ -55,7 +55,7 @@
 }
 
 /* REPLIES SPECIFIC */
-:local(.replyContent) {
+.replyContent {
   display: flex;
   flex-direction: row;
   width: auto;
