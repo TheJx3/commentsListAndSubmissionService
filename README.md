@@ -40,7 +40,7 @@ npm install
 ```
 
 ##CRUD
-
+<pre>
 GET:  song/:id/all
 
   song_id: number,\
@@ -119,6 +119,8 @@ PUT:  song/:id/edit_reply/:comment_id/:reply_id/
 
 
 DELETE: song/:id/delete_comment/:comment_id
+
+</pre>
 
   song_id: number,\
   comment_id: number
