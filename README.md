@@ -41,7 +41,7 @@ npm install
 
 ##CRUD
 <pre>
-GET:  song/:id/all
+GET:  song/:id/all_comments
 
   song_id: number,
   song_name: string,
@@ -119,8 +119,6 @@ PUT:  song/:id/edit_reply/:comment_id/:reply_id/
 
 
 DELETE: song/:id/delete_comment/:comment_id
-
-
 
   song_id: number,
   comment_id: number
