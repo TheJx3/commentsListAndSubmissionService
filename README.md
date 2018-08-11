@@ -43,10 +43,7 @@ npm install
 ## CRUD
 
 <pre>
-GET:
-  Get request for song based on id:
-  curl -H "Content-Type: application/json" -X GET -d '{":id":"1"}  /song:id/all_comments
-
+GET:  songs/:id/comment
 
   song_id: number, unique,
   song_name: string,
@@ -72,7 +69,7 @@ GET:
   foreign key(song_id);
 
 
-POST:   song/:id/add_comment
+POST:   songs/:id/comment
 
   song_id: number,
   comment_author: string,
@@ -82,7 +79,7 @@ POST:   song/:id/add_comment
   comment_text: blob_text
 
 
-POST:   song/:id/add_reply/:comment_id/
+POST:   songs/:id/reply/:comment_id/
 
   song_id: number,
   comment_id: number,
@@ -93,7 +90,7 @@ POST:   song/:id/add_reply/:comment_id/
   reply_text: blob_text
 
 
-PUT:  song/:id/edit_comment/:comment_id/
+PUT:  songs/:id/comment/:comment_id/
 
   song_id: number,
   comment_id: number,
@@ -104,7 +101,7 @@ PUT:  song/:id/edit_comment/:comment_id/
   comment_text: blob_text
 
 
-PUT:  song/:id/edit_reply/:comment_id/:reply_id/
+PUT:  songs/:id/reply/:comment_id/:reply_id/
 
   song_id: number,
   comment_id: number,
@@ -116,13 +113,13 @@ PUT:  song/:id/edit_reply/:comment_id/:reply_id/
   reply_text: blob_text
 
 
-DELETE: song/:id/delete_comment/:comment_id
+DELETE: songs/:id/comment/:comment_id
 
   song_id: number,
   comment_id: number
 
 
-DELETE: song/:id/delete_reply/:comment_id/:reply_id
+DELETE: songs/:id/reply/:comment_id/:reply_id
 
   song_id: number,
   comment_id: number,
