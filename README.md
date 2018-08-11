@@ -2,7 +2,7 @@
 
 # StreamBoard commentsListandSubmission
 
-> React component for StreamBoard that displays a comment list and submission form. 
+> React component for StreamBoard that displays a comment list and submission form.
 
 ## Related Projects
 
@@ -45,35 +45,28 @@ npm install
 <pre>
 GET:  songs/:id/comment
 
-  song_id: number,
+  song_id: number, unique,
   song_name: string,
   song_length: string,
-  song_comments: jsonb
 
-  jsonb = [
-    {
-      comments: [
-        {
-          comment_id: number,
-          comment_author: string,
-          comment_avatar: string,
-          comment_time: string,
-          comment_date: string,
-          comment_text: blobtext,
-          comment_replies: [
-            {
-              reply_id: number,
-              reply_author: string,
-              reply_avatar: string,
-              reply_time: string,
-              reply_date: string,
-              reply_text: blobtext,
-            },
-          ],
-        },
-      ],
-    },
-  ];
+  comment_id: number, primary
+  comment_author: string,
+  comment_avatar: string,
+  comment_time: string,
+  comment_date: string,
+  comment_text: blobtext,
+  song_id: number,
+  foreign key(song_id);
+
+  reply_id: number, unique
+  reply_author: string,
+  reply_avatar: string,
+  reply_time: string,
+  reply_date: string,
+  reply_text: blobtext,
+  comment_id: number,
+  foreign key(comment_id);
+  foreign key(song_id);
 
 
 POST:   songs/:id/comment
@@ -133,4 +126,3 @@ DELETE: songs/:id/reply/:comment_id/:reply_id
   reply_id: number
 
 </pre>
-
