@@ -1,0 +1,8 @@
+song_id, comment_id, comment_author, comment_avatar, comment_timestamp, comment_text, reply_id, reply_author, reply_avatar, reply_timestamp, reply_text
+1, 1, Victoria Yoland McDonald , 772, 1306881436, This song sounds like stinky feet!, , , , ,  
+1, 1, , , , , 1, Jacob Song Garcia Jr., 425, 1162224793, Lorem ipsum dolor sit amet. Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+1, 1, , , , , 2, Emma Flamingo Zhang the 6th, 181, 1038352922, This song sounds like stinky feet! 
+1, 2, Jonathan Flacco Yang Sr., 508, 1146104612, This song sounds like stinky feet!, , , , ,  
+1, 2, , , , , 3, Jackson Flacco Singh Sr., 65, 1338456793, Lorem ipsum dolor sit amet. Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+1, 3, Ava Iggy Smith the 5th, 945, 1153993121, This song sounds like stinky feet!, , , , ,  
+1, 4, Harper Yoland Jones the 5th, 125, 1181396891, This song sounds like stinky feet!, , , , ,  
