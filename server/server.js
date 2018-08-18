@@ -1,18 +1,20 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const parse = require('body-parser');
 const cassandra = require('./dbFunctions/dbHelpers.js');
 // const mongoDB = require('../db/db.js');
 const PORT = 1458;
 const app = express();
 
+app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
+app.use(parse.json());
 app.use((req, res, next) => {
   console.log(req.method, req.path);
   next();
 });
 
-app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // outputs all comments for a song
 // app.get('/api/songs/songId/comments', (req, res) => {
@@ -37,10 +39,8 @@ app.get('/songs/:id/comment', (req, res) => {
 });
 
 app.post('/songs/:id/comment', (req, res) => {
-  //comment needs to be an object with fields: song_id, comment_id, reply_id, comment_author, comment_avatar, comment_timestamp, comment_text, reply_author, reply_avatar, reply_timestamp, reply_text
-  cassandra.addCommentOrReply(req.body.comment, (err, success) => {
+  cassandra.addCommentOrReply(req.body, (err, success) => {
     if (err) {
-      console.log('Error at the server level with add comment!!', err);
       res.status(404).send();
     } else {
       res.status(200).send(success);
@@ -49,8 +49,7 @@ app.post('/songs/:id/comment', (req, res) => {
 });
 
 app.post('/songs/:id/reply/:comment_id/', (req, res) => {
-  //reply needs to be an object with fields: song_id, comment_id, reply_id, comment_author, comment_avatar, comment_timestamp, comment_text, reply_author, reply_avatar, reply_timestamp, reply_text
-  cassandra.addCommentOrReply(req.body.reply, (err, success) => {
+  cassandra.addCommentOrReply(req.body, (err, success) => {
     if (err) {
       console.log('Error at the server level with add reply!!', err);
       res.status(404).send();
@@ -62,8 +61,7 @@ app.post('/songs/:id/reply/:comment_id/', (req, res) => {
 
 
 app.put('/songs/:id/comment/:comment_id/', (req, res) => {
-  //commentEdit needs to be an object with fields: comment_text, song_id, comment_id
-  cassandra.editComment(req.body.commentEdit, (err, success) => {
+  cassandra.editComment(req.body, (err, success) => {
     if (err) {
       console.log('Error at the server level with edit comment!!', err);
       res.status(404).send();
@@ -73,9 +71,9 @@ app.put('/songs/:id/comment/:comment_id/', (req, res) => {
   });
 });
 
-app.put('songs/:id/reply/:comment_id/:reply_id/', (req, res) => {
+app.put('/songs/:id/reply/:comment_id/:reply_id/', (req, res) => {
   //commentEdit needs to be an object with fields: reply_text, song_id, comment_id, reply_id
-  cassandra.editReply(req.body.replyEdit, (err, success) => {
+  cassandra.editReply(req.body, (err, success) => {
     if (err) {
       console.log('Error at the server level with edit reply!!', err);
       res.status(404).send();
@@ -85,7 +83,7 @@ app.put('songs/:id/reply/:comment_id/:reply_id/', (req, res) => {
   });
 });
 
-app.delete('.songs/:id/comment/', (req, res) => {
+app.delete('/songs/:id/comment/', (req, res) => {
   cassandra.deleteSong(req.params.id, (err, success) => {
     if (err) {
       console.log('Error at the server level, failed to delete all song comments!', err);
@@ -96,7 +94,7 @@ app.delete('.songs/:id/comment/', (req, res) => {
   });
 });
 
-app.delete('.songs/:id/comment/:comment_id', (req, res) => {
+app.delete('/songs/:id/comment/:comment_id', (req, res) => {
   cassandra.deleteSong({ song_id: req.params.id, comment_id: req.params.comment_id }, (err, success) => {
     if (err) {
       console.log('Error at the server level, failed to delete a comment!', err);
@@ -108,7 +106,7 @@ app.delete('.songs/:id/comment/:comment_id', (req, res) => {
 });
 
 
-app.delete('songs/:id/reply/:comment_id/:reply_id', (req, res) => {
+app.delete('/songs/:id/reply/:comment_id/:reply_id', (req, res) => {
   cassandra.deleteSong({ song_id: req.params.id, comment_id: req.params.comment_id, reply_id: req.params.reply_id }, (err, success) => {
     if (err) {
       console.log('Error at the server level, failed to delete a reply!', err);

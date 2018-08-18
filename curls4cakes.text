@@ -1,0 +1,17 @@
+POST COMMENT:
+curl -X POST -d '{ "song_id": "10", "comment_id":"999999999", "reply_id": "0", "comment_author": "ZZcounts", "comment_avatar":"124", "comment_timestamp":"124", "comment_text": "hello friends!", "reply_author": "", "reply_avatar": "", "reply_timestamp":"", "reply_text": "" }' -H "Content-Type: application/json" http://localhost:1458/songs/10/comment
+
+POST REPLY:
+curl -X POST -d '{ "song_id": "10", "comment_id":"999999999", "reply_id": "66600000", "comment_author": "", "comment_avatar":"", "comment_timestamp":"", "comment_text": "", "reply_author": "ZZcounts", "reply_avatar": "124", "reply_timestamp":"1241241241241", "reply_text": "hello cakes and friends!" }' -H "Content-Type: application/json" http://localhost:1458/songs/10/reply/66600000/
+
+PUT COMMENT:
+curl -X PUT -d '{ "song_id": "10", "comment_id":"999999999", "comment_text": "Enemies flee!" }' -H "Content-Type: application/json" http://localhost:1458/songs/10/comment/999999999/
+
+PUT REPLY:
+curl -X PUT -d '{ "song_id": "10", "comment_id":"999999999", "reply_id": "66600000", "reply_text": "Enemies fleezy!" }' -H "Content-Type: application/json" http://localhost:1458/songs/10/reply/999999999/66000000/
+
+GET SONG
+curl -H "Content-Type: application/json" -X GET http://localhost:1458/songs/10/comment
+
+
+artillery quick --rate 500 http://localhost:1458/songs/2/comment
