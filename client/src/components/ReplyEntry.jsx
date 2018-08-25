@@ -23,7 +23,7 @@ import ReactTimeAgo from 'react-time-ago';
 
 // const Avatar = styled.div`
 //   height: 40px;
-//   border: 2px solid cyan; 
+//   border: 2px solid cyan;
 //   flex-basis: 5%;
 // `;
 
@@ -49,14 +49,14 @@ import ReactTimeAgo from 'react-time-ago';
 //   flex-direction: column;
 //   font-size: 12px;
 //   margin: 0px 10px 0px 0px;
-//   text-align: right; 
+//   text-align: right;
 //   color: #999;
 // `;
 
 // const ReplyButton = styled.button`
-//   height: 28px; 
+//   height: 28px;
 //   width: 32px;
-//   color: #999;  
+//   color: #999;
 //   margin-left: 100px;
 // `
 

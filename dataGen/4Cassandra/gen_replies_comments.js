@@ -99,9 +99,9 @@ const commentIncrementBy = incrementComment();
 const replyIncrementBy = incrementReply();
 
 async function create_comments_and_replies_by_id() {
-  const writeStream = fs.createWriteStream('dataGen/data/cassandra.csv');
+  const writeStream = fs.createWriteStream('dataGen/data/cassandra_5_7.csv');
   writeStream.write('song_id, comment_id, reply_id, comment_author, comment_avatar, comment_timestamp, comment_text, reply_author, reply_avatar, reply_timestamp, reply_text\n');
-  for (let i = 0; i <= 1; i += 1) {
+  for (let i = 50000001; i <= 70000000; i += 1) {
     const ableToWrite = writeStream.write(`${songIdIncrementBy(i)}, ${commentIncrementBy(i)}, ${replyIncrementBy(i)}, ${commentFuncs(getName, i)}, ${commentFuncs(getAvatar, i)}, ${commentFuncs(getTimeStamp, i)}, ${commentFuncs(getText, i)}, ${replyFuncs(getName, i)}, ${replyFuncs(getAvatar, i)}, ${replyFuncs(getTimeStamp, i)}, ${replyFuncs(getText, i)} \n`);
     if (!ableToWrite) {
       await new Promise(resolve => {

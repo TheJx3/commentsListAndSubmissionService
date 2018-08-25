@@ -31,6 +31,6 @@ module.exports = {
   output: {
     path: `${__dirname}/client/dist`,
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: 'bundled.js',
   },
 };

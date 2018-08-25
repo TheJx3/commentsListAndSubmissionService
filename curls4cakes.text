@@ -10,8 +10,8 @@ curl -X PUT -d '{ "song_id": "10", "comment_id":"999999999", "comment_text": "En
 PUT REPLY:
 curl -X PUT -d '{ "song_id": "10", "comment_id":"999999999", "reply_id": "66600000", "reply_text": "Enemies fleezy!" }' -H "Content-Type: application/json" http://localhost:1458/songs/10/reply/999999999/66000000/
 
-GET SONG
+GET SONG:
 curl -H "Content-Type: application/json" -X GET http://localhost:1458/songs/10/comment
 
-
+Artillery quick command:
 artillery quick --rate 500 http://localhost:1458/songs/2/comment

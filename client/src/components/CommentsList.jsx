@@ -3,13 +3,13 @@ import CommentEntry from './CommentEntry';
 
 const CommentsList = ({commentsList}) => (
   <div>
-    {commentsList.map((comment) => 
-    <CommentEntry 
+    {commentsList.map((comment) =>
+    <CommentEntry
       key={comment.id}
-      comment={comment} 
-      username={comment.username} 
+      comment={comment}
+      username={comment.username}
       userId={comment.userId}
-      songtime={comment.songtime} 
+      songtime={comment.songtime}
       timestamp={comment.timestamp}
       text={comment.text}
       replies={comment.replies}

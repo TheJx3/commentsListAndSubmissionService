@@ -1,8 +1,10 @@
+require('newrelic');
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const parse = require('body-parser');
 const cassandra = require('./dbFunctions/dbHelpers.js');
+const redis = require('./redis/redHelpers.js');
 // const mongoDB = require('../db/db.js');
 const PORT = 1458;
 const app = express();
@@ -11,10 +13,14 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(cors());
 app.use(parse.json());
 app.use((req, res, next) => {
-  console.log(req.method, req.path);
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
-
+// app.use((req, res, next) => {
+//   console.log(req.method, req.path);
+//   next();
+// });
 
 // outputs all comments for a song
 // app.get('/api/songs/songId/comments', (req, res) => {
@@ -28,12 +34,33 @@ app.use((req, res, next) => {
 // });
 
 app.get('/songs/:id/comment', (req, res) => {
-  cassandra.getAll(req.params.id, (err, success) => {
-    if (err) {
-      console.log('Error at the server level with getAll!', err);
-      res.status(404).send();
+  //check redis for query info
+  redis.checkRedis(req.params.id, (no, yes) => {
+    if (no) {
+      // if not on redis, check cassandra
+      console.log('Not on redis, fetching from server');
+
+      cassandra.getAll(req.params.id, (err, success) => {
+        if (err) {
+          // if not on cassandra, send error
+          console.log('Error with Cassandra at the server level using getAll!', err);
+          res.status(404).send();
+        } else {
+          // return to client
+          res.status(200).send(success.rows);
+
+          // save to redis for future caching
+          redis.saveToRedis(success.rows, (error) => {
+            if (error) {
+              console.log('Failed to save to redis');
+            }
+          });
+        }
+      });
     } else {
-      res.status(200).send(success);
+      // was originally on redis, return
+      console.log('Fetched from redis!');
+      res.status(200).send(yes);
     }
   });
 });
