@@ -16,7 +16,7 @@ const generateTitle = (stringSource, maxLength) => {
 async function begin() {
   const writeStream = fs.createWriteStream('streamtest.csv');
   writeStream.write('id,title,artist\n');
-  for (let i = 1; i <= 10000000; i++) {
+  for (let i = 1; i <= 1000; i++) {
     const ableToWrite = writeStream.write(`${i},${generateTitle(hipster, 4)},${generateTitle(hipster, 3)}\n`);
     if (!ableToWrite) {
       await new Promise(resolve => {

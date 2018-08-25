@@ -1,0 +1,133 @@
+config:
+  target: "http://localhost:1458"
+  phases:
+    - duration: 20
+      arrivalRate: 500
+    - duration: 60
+      arrivalRate: 10
+      rampTo: 5000
+    - duration: 60
+      arrivalRate: 5000
+      rampTo: 10000
+  payload:
+    path: "./ids2.csv"
+    fields:
+      - "song_id"
+      - "comment_id"
+      - "reply_id"
+scenarios:
+  - name: "View comments"
+    weight: 16
+    flow:
+      - loop:
+          - get:
+              url: "/songs/{{ song_id }}/comment"
+          # - think: 30
+        count: 50
+  - name: "View comments, write comment"
+    weight: 2
+    flow:
+      - loop:
+          - get:
+              url: "/songs/{{ song_id }}/comment"
+          - post:
+              url: "/songs/{{ song_id }}/comment"
+              json:
+                song_id: "{{ song_id }}"
+                comment_id: "{{ comment_id }}"
+                reply_id: "0"
+                comment_author: "President Cake"
+                comment_avatar: "666"
+                comment_timestamp: "123456789"
+                comment_text: "Aman is sweetening us up."
+                reply_author: ""
+                reply_avatar: ""
+                reply_timestamp: ""
+                reply_text: ""
+        count: 50
+  - name: "View comments, write comment, edit comment"
+    weight: 1
+    flow:
+      - loop:
+          - get:
+              url: "/songs/{{ song_id }}/comment"
+          - post:
+              url: "/songs/{{ song_id }}/comment"
+              json:
+                song_id: "{{ song_id }}"
+                comment_id: "{{ comment_id }}"
+                reply_id: "0"
+                comment_author: "President Cake"
+                comment_avatar: "666"
+                comment_timestamp: "123456789"
+                comment_text: "I am an test text, would not you know?"
+                reply_author: ""
+                reply_avatar: ""
+                reply_timestamp: ""
+                reply_text: ""
+          # - think: 30
+          - put:
+              url: "/songs/{{ song_id }}/comment/{{ comment_id }}/"
+              json:
+                song_id: "{{ song_id }}"
+                comment_id: "{{ comment_id }}"
+                comment_text: "xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo"
+        count: 50
+
+  - name: "View comments, write comment, write multiple replies, edit reply"
+    weight: 1
+    flow:
+      - loop:
+          - get:
+              url: "/songs/{{ song_id }}/comment"
+          - post:
+              url: "/songs/{{ song_id }}/comment"
+              json:
+                song_id: "{{ song_id }}"
+                comment_id: "{{ comment_id }}"
+                reply_id: "0"
+                comment_author: "President Reply"
+                comment_avatar: "621"
+                comment_timestamp: "123456789"
+                comment_text: "This is a comment!"
+                reply_author: ""
+                reply_avatar: ""
+                reply_timestamp: ""
+                reply_text: ""
+          - post:
+              url: "/songs/{{ song_id }}/reply/{{ comment_id }}/"
+              json:
+                song_id: "{{ song_id }}"
+                comment_id: "{{ comment_id }}"
+                reply_id: "{{ reply_id }}"
+                comment_author: ""
+                comment_avatar: ""
+                comment_timestamp: ""
+                comment_text: ""
+                reply_author: "Reply genius"
+                reply_avatar: "667"
+                reply_timestamp: "123456789"
+                reply_text: "You are wrong, I am right!"
+          - post:
+              url: "/songs/{{ song_id }}/reply/{{ comment_id }}/"
+              json:
+                song_id: "{{ song_id }}"
+                comment_id: "{{ comment_id }}"
+                reply_id: "{{ reply_id }}"
+                comment_author: ""
+                comment_avatar: ""
+                comment_timestamp: ""
+                comment_text: ""
+                reply_author: "Reply genius"
+                reply_avatar: "667"
+                reply_timestamp: "123456789"
+                reply_text: "You are wrong, I am write!"
+          # - think: 30
+          - put:
+              url: "/songs/:id/reply/:comment_id/:reply_id/"
+              json:
+                song_id: "{{ song_id }}"
+                comment_id: "{{ comment_id }}"
+                reply_id: "{{ reply_id }}"
+                reply1_text: "xoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxo"
+        count: 50

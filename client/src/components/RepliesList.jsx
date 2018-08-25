@@ -3,13 +3,13 @@ import ReplyEntry from './ReplyEntry';
 
 const RepliesList = ({repliesList}) => (
   <div>
-    {repliesList.map((reply) => 
-    <ReplyEntry 
+    {repliesList.map((reply) =>
+    <ReplyEntry
       key={reply.id}
-      reply={reply} 
+      reply={reply}
       username={reply.username}
       userId={reply.userId}
-      songtime={reply.songtime} 
+      songtime={reply.songtime}
       timestamp={reply.timestamp}
       text={reply.text}
     />

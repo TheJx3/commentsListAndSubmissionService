@@ -1,12 +1,12 @@
 const fs = require('fs');
 
-const lorumA = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
-const lorumB = 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum';
-const lorumC = 'This song is great';
+const lorumA = 'Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+const lorumB = 'This song sounds like stinky feet!';
+const lorumC = 'This song is great!';
 
 const firstName = ['Noah', 'Sophia', 'Jacob', 'Mia', 'Ethan', 'Emma', 'Daniel', 'Olivia', 'Matthew', 'Isabella', 'Alexander', 'Emily', 'Jayden', 'Sofia', 'Sebastian', 'Abigail', 'Liam', 'Victoria', 'David', 'Ava', 'Julian', 'Alexa', 'Aiden', 'Camila', 'Michael', 'Charlotte', 'Nathan', 'Samantha', 'Benjamin', 'Evelyn', 'Anthony', 'Scarlett', 'Isaac', 'Madison', 'Mason', 'Elizabeth', 'Dylan', 'Penelope', 'Andrew', 'Zoe', 'James', 'Chloe', 'Angel', 'Natalie', 'Joseph', 'Avery', 'Adrian', 'Allison', 'Aaron', 'Grace', 'Elijah', 'Aria', 'Logan', 'Amelia', 'William', 'Genesis', 'Mateo', 'Audrey', 'Lucas', 'Mila', 'Oliver', 'Ariana', 'Joshua', 'Melanie', 'Jonathan', 'Ella', 'Christopher', 'Zoey', 'Isaiah', 'Lily', 'Gabriel', 'Aubrey', 'Ryan', 'Delilah', 'Samuel', 'Leah', 'Jose', 'Maya', 'Luke', 'Ximena', 'Christian', 'Aaliyah', 'Damian', 'Layla', 'Jackson', 'Harper', 'Kevin', 'Hannah', 'Dominic', 'Violet', 'Leonardo', 'Brooklyn', 'Brandon', 'Valentina', 'Caleb', 'Bella', 'Adam', 'Natalia'];
 const middleName = ['Freddie', 'Flinstone', 'Macarron', 'Harold', 'Grace', 'Yoland', 'Alfredo', 'Eggy', 'Iggy', 'Flacco', 'Flingo', 'Ringo ', 'Turringo', 'Flamingo', 'Song', 'Winston'];
-const lastName = ['Smith', 'Williams', 'Lopez', 'Garcia', 'Herndandez', 'Nyguen', 'Lihn', 'Lee', 'Young', 'Brown', 'Porter', 'Jones', 'McDonald', 'Einstein', 'Jordan', 'Wang', 'Devi', 'Zhang', 'Li', 'Yang', 'Kumar', 'Singh'];
+const lastName = ['Smith', 'Williams', 'Lopez', 'Garcia', 'Herndandez', 'Nyguen', 'Dang', 'Lee', 'Young', 'Brown', 'Porter', 'Jones', 'McDonald', 'Einstein', 'Jordan', 'Wang', 'Devi', 'Zhang', 'Li', 'Yang', 'Kumar', 'Singh', 'Mohammad', 'Ahmed', 'Ali'];
 const sirName = ['', 'Jr.', 'Sr.', ' the 3rd', 'the 4th', 'the 5th', 'the 6th', 'the 7th'];
 const names = [];
 
@@ -37,33 +37,22 @@ const getAvatar = () => {
   return `${avatarNum}`;
 };
 
-const getTime = () => {
-  const hours = random(25);
-  const minutes = random(60);
-  return `${hours}:${minutes}:00`;
-};
-
-const getDate = () => {
-  const day = random(27);
-  const month = random(13);
-  const year = random(19);
-  return `${month}/${day}/20${year}`;
-};
+const getTimeStamp = () => Math.floor(Math.random() * (1534101332 - 1000000000) + 1000000000);
 
 const getText = () => {
-  const lorum = random(3);
-  if (lorum === 2) { return lorumC; }
-  if (lorum === 1) { return lorumB; }
+  const lorum = random(10);
+  if (lorum === 5) { return lorumA; }
+  if (lorum % 2 !== 0) { return lorumB; }
   return lorumA;
 };
 
-const getCommentId = () => 1 + random(40000000);
+const getsongId = () => 1 + random(10000000);
 
 async function createComments() {
-  const writeStream = fs.createWriteStream('dataGen/data/replies.csv');
-  writeStream.write('id, author, avatar, time, date, text, song_id \n');
-  for (let i = 1; i <= 200000000; i += 1) {
-    const ableToWrite = writeStream.write(`${i},${getName()},${getAvatar()},${getTime()},${getDate()},${getText()},${getCommentId()}\n`);
+  const writeStream = fs.createWriteStream('dataGen/data/postgres_comments.csv');
+  writeStream.write('id, author, avatar, timestamp, text, song_id \n');
+  for (let i = 1; i <= 40000000; i += 1) {
+    const ableToWrite = writeStream.write(`${i},${getName()},${getAvatar()},${getTimeStamp()},${getText()},${getsongId()}\n`);
     if (!ableToWrite) {
       await new Promise(resolve => {
         writeStream.once('drain', resolve);
